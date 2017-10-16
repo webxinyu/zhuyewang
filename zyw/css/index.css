@@ -40,13 +40,25 @@ header {
 	position: relative;
 	color: #fff;
 }
+.news>p {
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	margin-bottom: 0;
+	font-size: 10px;
+	color: #fff;
+}
+.news>p:first-of-type>.iconfont{
+	font-size: 20px;
+}
 .news>.newsSum {
 	position: absolute;
-	top: 10%;
+	top: 5%;
 	left: 60%;
 	display: inline-block;
-	height: 15px;
-	line-height: 17px;
+	height: 13px;
+	line-height: 15px;
 	border-radius: 13px;
 	font-style: normal;
 	font-size: 9px;
@@ -64,6 +76,9 @@ header {
 .nav {							/* 分类导航 */
 	height: 360px;
 	width: 100%;
+	background: #fff;
+	margin-top: 3px;
+	padding-top: 5px;
 }
 .nav .navLsit {
 	display: flex;
@@ -72,4 +87,20 @@ header {
 .nav .navLsit li {
 	flex: 1;
 	text-align: center;
+	text-align: center;
+	position: relative;
+}
+.nav .navLsit li>p:first-of-type {
+	background: #2AC845;
+	height: 3.5rem;
+	width: 3.5rem;
+	line-height: 3.5rem;
+	border-radius: 30px;
+	position: relative;
+	margin-left: 50%;
+	left: -1.75rem;
+}
+.nav .navLsit li>p:first-of-type>.iconfont {
+	font-size: 24px;
+	color: #fff;
 }
