@@ -31,5 +31,33 @@
 			<i id="newsSum" class="newsSum">10</i>
 		</div>
 	</header>
+	<!-- 轮播图 -->
+	<div class="mui-slider">
+	  <div class="mui-slider-group mui-slider-loop">
+	    <!--支持循环，需要重复图片节点-->
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner4.png" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner1.png" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner2.png" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner3.png" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner4.png" /></a></div>
+	    <!--支持循环，需要重复图片节点-->
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
+	  </div>
+	</div>
+	<!-- 阶段性主题 -->
+	<section class="theme">
+		<img src="images/index/theme.jpg"/>
+	</section>
+	
+	
+	
+	<!--js-->
+	<script type="text/javascript">
+		//获得slider插件对象
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	</script>
 </body>
 </html>

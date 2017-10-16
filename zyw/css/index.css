@@ -53,3 +53,11 @@ header {
 	background: #f00;
 	padding: 0 3px;
 }
+.theme {						/* 主推活动 */
+	height: 185px;
+	width: 100%;
+}
+.theme>img {
+	display: block;
+	width: 100%;
+}
