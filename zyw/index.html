@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
     <script src="js/mui.min.js"></script>
+    <script src="js/iconfont.js" type="text/javascript" charset="utf-8"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
     </script>
 </head>
 <body>
-	
+	<!-- 头部 -->
+	<header>
+		<!-- 扫一扫 -->
+		<div class="scan">
+			<p><span class="iconfont icon-saoyisao"></span></p>
+			<p>扫一扫</p>					
+		</div>
+		<!-- 搜索框 -->
+		<div class="mui-input-row mui-search">
+			<input type="search" class="mui-input-clear" placeholder="">
+		</div>
+		<!-- news -->
+		<div class="news">
+			<span class="mui-icon mui-icon-chat"></span>
+			<i id="newsSum" class="newsSum">10</i>
+		</div>
+	</header>
 </body>
 </html>
