@@ -1,6 +1,7 @@
 body {
 	background: #f1f1f1;
 }
+ul,li {list-style: none;}
 header {
 	background: #2AC845;
 	height: 44px;
@@ -54,10 +55,21 @@ header {
 	padding: 0 3px;
 }
 .theme {						/* 主推活动 */
-	height: 185px;
 	width: 100%;
 }
 .theme>img {
 	display: block;
 	width: 100%;
+}
+.nav {							/* 分类导航 */
+	height: 360px;
+	width: 100%;
+}
+.nav .navLsit {
+	display: flex;
+	padding-left: 0;
+}
+.nav .navLsit li {
+	flex: 1;
+	text-align: center;
 }
