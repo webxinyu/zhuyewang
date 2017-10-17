@@ -227,7 +227,31 @@
 					"images/index/celeals.png",
 					"images/index/microShow.jpg",
 					"images/index/microShow02.png",
-					"images/index/microShow01.png"
+					"images/index/microShow01.png",
+					"js/index.js",
+					"qrcode.html"
+				],
+				"refer": [
+					"html/qrcode.html"
+				],
+				"priority": 0
+			},
+			"qrcode.html": {
+				"resources": [
+					"js/index.js",
+					"index.html",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/qrcode.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
