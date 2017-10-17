@@ -118,7 +118,12 @@ header {
 }
 .hotTwo>a {
 	flex: 1;
+	border-right: 1px #f1f1f1 solid;
+	border-bottom: 1px #f1f1f1 solid;
 }
+.hotTwo>a:last-of-type {
+	border-right: none;
+} 
 .hotTwo>a>dl {
 	min-height: 90px;
 	padding: 0 0.5rem;
@@ -127,6 +132,11 @@ header {
 }
 .hotTwo>a>dl dt {
 	flex: 1;
+}
+.hotTwo>a>dl dt>h5 {
+	font-size: 15px;
+	color: #333;
+	font-weight: bold;
 }
 .hotTwo>a>dl dd {
 	flex: 1;
@@ -137,9 +147,18 @@ header {
 }
 .hotThree>a {
 	flex: 1;
+	border-right: 1px #f1f1f1 solid;
 }
+.hotThree>a:last-of-type {
+	border-right: none;
+} 
 .hotThree>a>dl {
 	margin: 0;
+}
+.hotThree>a>dl dt>h5 {
+	font-size: 15px;
+	color: #333;
+	font-weight: bold;
 }
 .hotThree>a>dl>dd {
 	margin-left: 0px;
@@ -158,4 +177,67 @@ header {
 }
 .hotThree>a:first-of-type>dl dd {
 	flex: 1;
+}
+.hotThree>a:nth-of-type(2)>dl dt,
+.hotThree>a:nth-of-type(3)>dl dt
+ {
+	padding: 0 0.5rem;
+}
+.preferredFruit {								/* 优选水果 */
+	background: #fff;
+	margin-top: 17px;
+}
+.shopList>ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.shopList>ul li {
+	flex: 1;
+}
+.shopList>ul li>a {
+	display: block;
+	padding: 0.5rem 0.5rem 0;
+	border-bottom: 1px #f1f1f1 solid;
+	border-right: 1px #f1f1f1 solid;
+}
+.shopList>ul:nth-of-type(1) li>a,
+.shopList>ul:nth-of-type(2) li>a {
+	display: flex;
+}
+.shopList>ul li>a .leftTitle>h5 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+}
+.preferredFruitTitle {
+	width: 100%;
+	position: relative;
+}
+.preferredFruitTitle>img:first-of-type {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.preferredFruitTitle>img:last-of-type {
+	display: block;
+    width: auto;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+.activityads {
+	padding: 0 0.5rem;
+	background: #f1f1f1;
+}
+.activityads>img {
+	width: 100%;
 }
