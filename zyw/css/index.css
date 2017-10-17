@@ -6,6 +6,11 @@ header {
 	background: #2AC845;
 	height: 44px;
 	display: -webkit-flex;
+	padding-top: 4px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 }
 .scan {								/* 扫一扫 */
 	flex: 1;
@@ -23,11 +28,10 @@ header {
 	font-size: 20px;
 }
 .mui-search {						/* 搜索框 */
-	flex: 4;
-	top: 5px;
-	height: 34px;
-	background: #fff;
 	border-radius: 5px;
+	background: #fff;
+	height: 34px;
+	
 }
 .mui-search .mui-input-clear {
 	margin-bottom: 0;
@@ -66,6 +70,9 @@ header {
 	background: #f00;
 	padding: 0 3px;
 }
+.mui-slider {					/* 轮播图 */
+	margin-top: 44px;
+}
 .theme {						/* 主推活动 */
 	width: 100%;
 }
@@ -74,7 +81,6 @@ header {
 	width: 100%;
 }
 .nav {							/* 分类导航 */
-	height: 360px;
 	width: 100%;
 	background: #fff;
 	margin-top: 3px;
@@ -103,4 +109,53 @@ header {
 .nav .navLsit li>p:first-of-type>.iconfont {
 	font-size: 24px;
 	color: #fff;
+}
+.hot {									/* 热门推荐 */
+	background: #fff;
+}
+.hotTwo {
+	display: flex;
+}
+.hotTwo>a {
+	flex: 1;
+}
+.hotTwo>a>dl {
+	min-height: 90px;
+	padding: 0 0.5rem;
+	margin: 0;
+	display: flex;
+}
+.hotTwo>a>dl dt {
+	flex: 1;
+}
+.hotTwo>a>dl dd {
+	flex: 1;
+	margin-left: 0px;
+}
+.hotThree {
+	display: flex;
+}
+.hotThree>a {
+	flex: 1;
+}
+.hotThree>a>dl {
+	margin: 0;
+}
+.hotThree>a>dl>dd {
+	margin-left: 0px;
+}
+.hotThree>a:first-of-type {
+	flex: 2;
+}
+.hotThree>a:first-of-type>dl {
+	min-height: 90px;
+	padding: 0 0.5rem;
+	margin: 0;
+	display: flex;
+}
+.hotThree>a:first-of-type>dl dt {
+	flex: 1;
+}
+.hotThree>a:first-of-type>dl dd {
+	flex: 1;
 }
