@@ -245,6 +245,7 @@ header {
 	background: #fff;
 	margin-top: 17px;
 	margin-bottom: 44px;
+	width: 100%;
 }
 .microShow .microShowTitle {
 	width: 100%;
@@ -296,6 +297,10 @@ header {
 }
 .showList>ul li {
 	flex: 1;
+}
+.showTime>img {
+	display: block;
+	width: 100%;
 }
 .topTitle>h4 {
 	color: #333;
