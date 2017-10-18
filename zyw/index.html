@@ -17,7 +17,7 @@
 	<!-- 头部 -->
 	<header>
 		<!-- 扫一扫 -->
-		<div class="scan" id="scan">
+		<div class="scan" id="scan" onclick="clicked('barcode_scan.html',true,true)">
 			<p><span class="iconfont icon-saoyisao"></span></p>
 			<p>扫一扫</p>					
 		</div>
@@ -26,7 +26,7 @@
 			<input type="search" class="mui-input-clear" placeholder="">
 		</div>
 		<!-- news -->
-		<div class="news">
+		<div class="news" id="news">
 			<p><span class="mui-icon mui-icon-chat"></span></p>
 			<i id="newsSum" class="newsSum">10</i>
 			<p>消息</p>	
@@ -653,12 +653,20 @@
 		});
 		//tap为mui封装的单击事件，可参考手势事件章节
 		document.getElementById('scan').addEventListener('tap', function() {
-		  //打开关于页面
+		  //打开扫一扫页面
 		  mui.openWindow({
-		    url: 'html/qrcode.html', 
+		    url: 'html/barcode_scan.html', 
 		    id:'scan'
 		  });
 		});
+		document.getElementById('news').addEventListener('tap', function() {
+		  //打开扫一扫页面
+		  mui.openWindow({
+		    url: 'html/news/newsHome.html', 
+		    id:'news'
+		  });
+		});
+		
 	</script>
 </body>
 </html>

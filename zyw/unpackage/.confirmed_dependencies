@@ -40,7 +40,9 @@
 		],
 		"refer": [
 			"qrcode.html",
-			"html/qrcode.html"
+			"html/qrcode.html",
+			"html/barcode_scan.html",
+			"html/news/newsHome.html"
 		]
 	},
 	"qrcode.html": {
@@ -59,7 +61,47 @@
 		"resources": [
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"html/res/doc.js",
+			"html/res/doc.css",
+			"html/res/prettify.js",
+			"html/res/prettify.sons.css",
+			"js/common.js",
+			"js/immersed.js"
+		],
+		"refer": [
+			"html/barcode_scan.html"
+		]
+	},
+	"html/barcode_scan.html": {
+		"resources": [
+			"js/common.js"
+		]
+	},
+	"html/news/newsHome.html": {
+		"resources": [
+			"js/iconfont.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/news/news.css",
+			"images/index/hottwo01.png",
+			"images/index/delicateVegetables.png",
+			"images/index/hottwo02.png",
+			"js/common.js"
+		],
+		"refer": [
+			"html/news/calendar.html"
+		]
+	},
+	"html/news/calendar.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/MCalendar.js",
+			"css/MCalendar.css"
 		]
 	}
 }
