@@ -82,4 +82,66 @@ header>span:nth-of-type(3)>.iconfont {
 	font-size: 12px;
 	color: #999;
 }
-
+.newsContentNav {					/* 信息详情导航 */
+	background: #fff;
+	width: 100%;
+	display: flex;
+}
+.newsContentNav li {
+	flex: 1;
+	position: relative;
+}
+.newsContentNav li>p {
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 2px #fff solid;
+	position: relative;
+	left: 50%;
+	margin-left: -25px;
+	margin-bottom: 0;
+	color: #333;
+}
+.logisticsNews {					/* 物流消息列表 */
+	padding: 0 17px;
+}
+.logisticsNews li>p {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #999;
+	margin-bottom: 0;
+}
+.logisticsNews li>a {
+	display: block;
+	border: 1px #C0C0C0 solid;
+	border-radius: 8px;
+	padding: 10px 8px;
+	background: #fff;
+}
+.logisticsNews li>a>h5 {
+	color: #000;
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.logisticsNews li>a>dl {
+	height: 30px;
+}
+.logisticsNews li>a>dl dt {
+	float: left;
+	width: 30px;
+	height: 30px;
+}
+.logisticsNews li>a>dl dt>img {
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+.logisticsNews li>a>dl dd {
+	font-size: 12px;
+	color: #666;
+	line-height: 14px;
+}

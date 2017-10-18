@@ -286,7 +286,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"html/news/calendar.html"
+					"html/news/calendar.html",
+					"html/news/newsContent.html"
 				],
 				"priority": 0
 			},
@@ -298,6 +299,21 @@
 					"css/mui.min.css",
 					"js/MCalendar.js",
 					"css/MCalendar.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/news/newsContent.html": {
+				"resources": [
+					"css/mui.min.css",
+					"images/index/hottwo01.png",
+					"js/iconfont.js",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"images/index/delicateVegetables.png",
+					"css/news/news.css",
+					"images/index/hottwo02.png"
 				],
 				"refer": [],
 				"priority": 0
