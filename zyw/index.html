@@ -56,11 +56,11 @@
 				<p style="background: #f3aa27;"><span class="iconfont icon-miaoxiansheng"></span></p>
 				<p>新鲜水果</p>
 			</li>
-			<li>
+			<li id="toVegetable">
 				<p style="background: #2AC845;"><span class="iconfont icon-ganxie"></span></p>
 				<p>优选蔬菜</p>
 			</li>
-			<li>
+			<li id="toCereals">
 				<p style="background: #dae43d;"><span class="iconfont icon-zaocan"></span></p>
 				<p>五谷杂粮</p>
 			</li>
@@ -82,9 +82,9 @@
 				<p style="background: #007AFF"><span class="iconfont icon-shuiguo"></span></p>
 				<p>果蔬外卖</p>
 			</li>
-			<li>
+			<li id="toRQ">
 				<p style="background: #c066c1;"><span class="iconfont icon-31daishouhuo"></span></p>
-				<p>同城物流</p>
+				<p>肉禽</p>
 			</li>
 			<li>
 				<p style="background: #4CD964;"><span class="iconfont icon-31daifahuo"></span></p>
@@ -666,11 +666,44 @@
 		    id:'news'
 		  });
 		});
+		document.getElementById('toVegetable').addEventListener('tap', function() {
+		  //打开新蔬菜页面
+		  mui.openWindow({
+		    url: 'html/fruit/fruitIndex.html', 
+		    id:'toVegetable',
+		    extras:{
+		       name:'toVegetable',
+		    }
+		  });
+		});
 		document.getElementById('toFruit').addEventListener('tap', function() {
 		  //打开新鲜水果页面
 		  mui.openWindow({
 		    url: 'html/fruit/fruitIndex.html', 
-		    id:'toFruit'
+		    id:'toFruit',
+		    extras:{
+		       name:'toFruit',
+		    }
+		  });
+		});
+		document.getElementById('toCereals').addEventListener('tap', function() {
+		  //打开五谷杂粮页面
+		  mui.openWindow({
+		    url: 'html/fruit/fruitIndex.html', 
+		    id:'toCereals',
+		    extras:{
+		       name:'toCereals',
+		    }
+		  });
+		});
+		document.getElementById('toRQ').addEventListener('tap', function() {
+		  //打开肉禽页面
+		  mui.openWindow({
+		    url: 'html/fruit/fruitIndex.html', 
+		    id:'toRQ',
+		    extras:{
+		       name:'toRQ',
+		    }
 		  });
 		});
 		

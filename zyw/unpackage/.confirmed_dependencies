@@ -131,7 +131,15 @@
       "css/iconfont.css",
       "css/mui.min.css",
       "fonts/mui.ttf",
-      "js/immersed.js"
+      "js/immersed.js",
+      "js/share.js",
+      "images/banner1.png",
+      "images/banner2.png",
+      "images/banner4.png",
+      "images/banner3.png",
+      "images/index/hottwo01.png",
+      "images/fruit/shopList.webp",
+      "js/jquery-2.1.1.min.js"
     ],
     "refer": [
       "index.html",
