@@ -52,7 +52,7 @@
 	<!-- 分类导航 -->
 	<nav class="nav">
 		<ul class="navLsit">
-			<li>
+			<li id="toFruit">
 				<p style="background: #f3aa27;"><span class="iconfont icon-miaoxiansheng"></span></p>
 				<p>新鲜水果</p>
 			</li>
@@ -666,6 +666,14 @@
 		    id:'news'
 		  });
 		});
+		document.getElementById('toFruit').addEventListener('tap', function() {
+		  //打开新鲜水果页面
+		  mui.openWindow({
+		    url: 'html/fruit/fruitIndex.html', 
+		    id:'toFruit'
+		  });
+		});
+		
 		
 	</script>
 </body>

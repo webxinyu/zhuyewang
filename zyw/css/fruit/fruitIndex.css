@@ -1,0 +1,95 @@
+html,body {background: #f1f1f1;}
+ul,li {margin: 0;padding: 0;list-style: none;}
+header {
+	height: 44px;
+	width: 100%;
+	border-bottom: 1px #ccc solid;
+	display: flex;
+	background: #fff;
+}
+header>span {
+	line-height: 44px;
+	text-align: center;
+	height: 44px;
+}
+header>span>.iconfont {
+	font-size: 24px;
+}
+header>span:nth-of-type(1) {
+	flex: 1;
+}
+header>span:nth-of-type(2) {
+	flex: 1;
+}
+header>span:nth-of-type(3) {
+	flex: 4;
+}
+header>span:nth-of-type(4),
+header>span:nth-of-type(5) {
+	flex: 1;
+	position: relative;
+}
+header>span:nth-of-type(4)>b,
+header>span:nth-of-type(5)>b {
+	display: block;
+	position: absolute;
+	top: 9px;
+	right: 10%;
+	min-width: 16px;
+	height: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	background: #FF0000;
+	color: #fff;
+	text-align: center;
+	font-size: 10px;
+	border-radius: 8px;
+}
+.more {
+	position: absolute;
+	width: 140px;
+	padding: 0 10px;
+	right: 10%;
+	background: rgba(0,0,0,0.6);
+	border-radius: 5px;
+	display: none;
+}
+.more li {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px #666 solid;
+	overflow: hidden;
+	color: #fff;
+	text-align: left;
+}
+.more li>span {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 60px;
+	text-align: center;
+}
+.more li>span>.mui-icon {
+	font-weight: normal;
+	font-size: 20px;
+}
+.more li>span>.iconfont {
+	font-size: 20px;
+}
+.more li:first-of-type>span {
+	position: relative;
+}
+.more li:first-of-type>span>b {
+	position: absolute;
+	display: block;
+	padding:0 3px;
+	background: #FF0000;
+	color: #fff;
+	font-weight: normal;
+	border-radius: 12px;
+	height: 12px;
+	line-height: 14px;
+	font-size: 10px;
+	right: 30%;
+	top: 6px;
+}
