@@ -44,6 +44,10 @@
 	    <!--支持循环，需要重复图片节点-->
 	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
 	  </div>
+	  <!-- 索引 -->
+	  <div class="mui-slider-indicator">
+	  	
+	  </div>
 	</div>
 	<!-- 阶段性主题 -->
 	<section class="theme">
@@ -74,7 +78,7 @@
 			</li>
 		</ul>
 		<ul class="navLsit">
-			<li>
+			<li id="toMicroShow">
 				<p style="background: #a02fe6;"><span class="iconfont icon-zhibojian"></span></p>
 				<p>微秀场</p>
 			</li>
@@ -713,7 +717,13 @@
 		    id:'toLocalInformation'
 		  });
 		});
-		
+		document.getElementById('toMicroShow').addEventListener('tap', function() {
+		  //打开微秀场页面
+		  mui.openWindow({
+		    url: 'html/microShow/microShow.html', 
+		    id:'toMicroShow'
+		  });
+		});
 		
 		
 	</script>

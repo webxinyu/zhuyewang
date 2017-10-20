@@ -99,7 +99,7 @@
         },
         "NativeObj":{
         	"description": "原生对象"
-        },"OAuth":{},"Share":{}
+        },"OAuth":{},"Share":{},"Push":{},"Payment":{},"Statistic":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -234,7 +234,8 @@
 					"html/barcode_scan.html",
 					"html/news/newsHome.html",
 					"html/fruit/fruitIndex.html",
-					"html/localInformation/localInformation.html"
+					"html/localInformation/localInformation.html",
+					"html/microShow/microShow.html"
 				],
 				"priority": 0
 			},
@@ -355,7 +356,24 @@
 					"js/mui.min.js",
 					"css/iconfont.css",
 					"css/mui.min.css",
-					"css/localInformation/localInformation.css"
+					"css/localInformation/localInformation.css",
+					"images/index/hottwo01.png",
+					"images/index/delicateVegetables.png",
+					"images/index/hottwo02.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/microShow/microShow.html": {
+				"resources": [
+					"css/microShow/microShow.css",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/common.js",
+					"images/add.png",
+					"images/index/microShow01.png"
 				],
 				"refer": [],
 				"priority": 0
