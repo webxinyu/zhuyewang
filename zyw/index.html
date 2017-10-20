@@ -68,7 +68,7 @@
 				<p style="background: #dc4d5a;"><span class="iconfont icon-guoneiyou"></span></p>
 				<p>农业旅游</p>
 			</li>
-			<li>
+			<li id="toLocalInformation">
 				<p style="background: #4db5dd;"><span class="iconfont icon-gonggao"></span></p>
 				<p>本地资讯</p>
 			</li>
@@ -706,6 +706,14 @@
 		    }
 		  });
 		});
+		document.getElementById('toLocalInformation').addEventListener('tap', function() {
+		  //打开本地资讯页面
+		  mui.openWindow({
+		    url: 'html/localInformation/localInformation.html', 
+		    id:'toLocalInformation'
+		  });
+		});
+		
 		
 		
 	</script>

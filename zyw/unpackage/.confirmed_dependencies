@@ -43,7 +43,8 @@
       "html/qrcode.html",
       "html/barcode_scan.html",
       "html/news/newsHome.html",
-      "html/fruit/fruitIndex.html"
+      "html/fruit/fruitIndex.html",
+      "html/localInformation/localInformation.html"
     ]
   },
   "qrcode.html": {
@@ -149,6 +150,16 @@
       "index.html",
       "html/news/newsHome.html",
       "html/news/calendar.html"
+    ]
+  },
+  "html/localInformation/localInformation.html": {
+    "resources": [
+      "js/iconfont.js",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/localInformation/localInformation.css"
     ]
   }
 }
