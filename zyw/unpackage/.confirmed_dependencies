@@ -139,7 +139,11 @@
       "images/banner3.png",
       "images/index/hottwo01.png",
       "images/fruit/shopList.webp",
-      "js/jquery-2.1.1.min.js"
+      "js/jquery-2.1.1.min.js",
+      "js/fruit/fruit.js",
+      "images/fruit/RQ.webp",
+      "images/fruit/cereals.webp",
+      "images/fruit/vegetableList.webp"
     ],
     "refer": [
       "index.html",
