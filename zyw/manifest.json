@@ -440,7 +440,9 @@
 					"js/mui.min.js",
 					"css/home/home.css",
 					"css/iconfont.css",
-					"images/index/hottwo01.png"
+					"images/index/hottwo01.png",
+					"css/footer.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
