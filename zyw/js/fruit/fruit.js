@@ -81,7 +81,7 @@ window.onload = function(){
 	//导航的固定
 	//console.log($("#shopListNav").offset().top);
 	if ($("#shopListNav").offset().top <= 44) {
-		$("#shopListNav").css({"position":"fixed","top":"44px","width":"100%","zIndex":"9999"});
+		$("#shopListNav").css({"position":"fixed","top":"44px","width":"100%","zIndex":"999"});
 	}
 	
 	var mTop;

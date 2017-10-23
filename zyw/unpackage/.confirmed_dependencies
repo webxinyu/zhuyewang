@@ -40,7 +40,8 @@
 			"html/home/home.html",
 			"home.html",
 			"find.html",
-			"tab-webview-subpage-about.html"
+			"tab-webview-subpage-about.html",
+			"css/footer.css"
 		],
 		"refer": [
 			"qrcode.html",
@@ -132,7 +133,8 @@
 			"css/iconfont.css",
 			"images/index/delicateVegetables.png",
 			"css/news/news.css",
-			"images/index/hottwo02.png"
+			"images/index/hottwo02.png",
+			"images/index/hotthree03.png"
 		],
 		"refer": []
 	},
@@ -198,7 +200,9 @@
 			"index.html",
 			"html/home/home_main.html",
 			"css/home/home.css",
-			"css/iconfont.css"
+			"css/iconfont.css",
+			"css/footer.css",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"index.html",
@@ -232,7 +236,10 @@
 	"html/home/home_main.html": {
 		"resources": [
 			"css/mui.min.css",
-			"js/mui.min.js"
+			"js/mui.min.js",
+			"css/home/home.css",
+			"css/iconfont.css",
+			"images/index/hottwo01.png"
 		]
 	}
 }
