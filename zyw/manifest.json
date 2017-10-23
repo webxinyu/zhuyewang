@@ -227,7 +227,11 @@
 					"images/index/microShow02.png",
 					"images/index/microShow01.png",
 					"js/index.js",
-					"qrcode.html"
+					"qrcode.html",
+					"html/home/home.html",
+					"home.html",
+					"find.html",
+					"tab-webview-subpage-about.html"
 				],
 				"refer": [
 					"html/qrcode.html",
@@ -235,7 +239,11 @@
 					"html/news/newsHome.html",
 					"html/fruit/fruitIndex.html",
 					"html/localInformation/localInformation.html",
-					"html/microShow/microShow.html"
+					"html/microShow/microShow.html",
+					"orders.html",
+					"tab-webview-subpage-setting.html",
+					"tab-webview-subpage-chat.html",
+					"tab-webview-subpage-contact.html"
 				],
 				"priority": 0
 			},
@@ -374,6 +382,58 @@
 					"js/common.js",
 					"images/add.png",
 					"images/index/microShow01.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/home.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"index.html",
+					"html/home/home_main.html",
+					"css/home/home.css",
+					"css/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"home.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab-webview-subpage-about.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab-webview-subpage-chat.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab-webview-subpage-contact.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/home_main.html": {
+				"resources": [
+					"css/mui.min.css",
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
