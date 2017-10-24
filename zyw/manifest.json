@@ -397,9 +397,14 @@
 					"css/home/home.css",
 					"css/iconfont.css",
 					"css/footer.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"images/index/hottwo01.png",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/home/subpage/setUp.html"
+				],
 				"priority": 0
 			},
 			"home.html": {
@@ -443,6 +448,40 @@
 					"images/index/hottwo01.png",
 					"css/footer.css",
 					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/subpage/setUp.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/home/setUp.css",
+					"css/iconfont.css",
+					"js/common.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"html/home/subpage/myInformation/myInformation.html"
+				],
+				"priority": 0
+			},
+			"html/home/subpage/myInformation/myInformation.html": {
+				"resources": [
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"js/common.js"
+				],
+				"refer": [
+					"html/home/subpage/myInformation/changeTheUserName.html"
+				],
+				"priority": 0
+			},
+			"html/home/subpage/myInformation/changeTheUserName.html": {
+				"resources": [
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
