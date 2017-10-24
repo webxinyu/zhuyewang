@@ -63,14 +63,65 @@
 		</header>
 		<section>
 			<p>用户名：</p>
-			<p><input type="text" name="" id="" value="ayw1324324" /></p>
+			<p><input type="text" class="mui-input-clear" placeholder="请输入用户名" autofocus="autofocus"></p>
 			<p>以中文或英文字母开头，限4-16个字符，一个汉字为两个字符</p>
-			<p><input type="button" name="" id="" value="确定" /></p>
+			<p><input type="button" name="" id="makeSureNewName" value="确定" /></p>
 		</section>		
 	</body>
 	<script src="../../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../../../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../js/setAndget.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		var toNicknameValue = null;
+		mui.plusReady(function(){
+			var self = plus.webview.currentWebview();
+			var name = self.name;
+			toNicknameValue = name;
+		});
+		/* 输入表单自动获取焦点事件 */
+		var nativeWebview, imm, InputMethodManager;
+		var initNativeObjects = function() {
+		    if (mui.os.android) {
+		        var main = plus.android.runtimeMainActivity();
+		        var Context = plus.android.importClass("android.content.Context");
+		        InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+		        imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+		    } else {
+		        nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+		    }
+		};
+		var showSoftInput = function() {
+		    var nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+		    if (mui.os.android) {
+		        //强制当前webview获得焦点
+		        plus.android.importClass(nativeWebview);
+		        nativeWebview.requestFocus();
+		        imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+		    } else {
+		        nativeWebview.plusCallMethod({
+		            "setKeyboardDisplayRequiresUserAction": false
+		        });
+		    }
+		    setTimeout(function() {
+		       //此处可写具体逻辑设置获取焦点的input
+		       $(".mui-input-clear").val(toNicknameValue);
+		       var inputElem = document.querySelector('input');
+		            inputElem.focus(); 
+		    }, 200);
+		};
+		mui.plusReady(function() {
+			initNativeObjects();
+			showSoftInput();
+		});
 		
+		$("#makeSureNewName").click(function(){
+			var valueName = $(".mui-input-clear").val();
+			console.log(valueName);
+			set("newUserName", valueName);
+			back();
+		});
+	
+
 	</script>
 </html>

@@ -273,15 +273,45 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/iconfont.css",
-			"js/common.js"
+			"js/common.js",
+			"js/setAndget.js",
+			"js/immersed.js",
+			"css/common.css"
 		],
 		"refer": [
-			"html/home/subpage/myInformation/changeTheUserName.html"
+			"html/home/subpage/myInformation/changeTheUserName.html",
+			"html/home/subpage/myInformation/birthday.html",
+			"html/home/subpage/myInformation/headSculpture.html"
 		]
 	},
 	"html/home/subpage/myInformation/changeTheUserName.html": {
 		"resources": [
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"js/jquery-2.1.1.min.js",
+			"js/setAndget.js"
+		]
+	},
+	"html/home/subpage/myInformation/birthday.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"css/app.css",
+			"css/mui.picker.min.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/common.js",
+			"css/iconfont.css",
+			"js/setAndget.js"
+		]
+	},
+	"html/home/subpage/myInformation/headSculpture.html": {
+		"resources": [
+			"css/common.css",
+			"js/immersed.js",
+			"js/common.js",
+			"css/iconfont.css"
 		]
 	}
 }
