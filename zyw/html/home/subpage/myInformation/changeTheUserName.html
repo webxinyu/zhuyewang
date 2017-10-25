@@ -117,9 +117,11 @@
 		
 		$("#makeSureNewName").click(function(){
 			if ($(".mui-input-clear").val().length < 4 || $(".mui-input-clear").val().length > 16) {
-				mui.alert("请输入4-16位字符！");
+				//mui.alert("请输入4-16位字符！");
+				plus.nativeUI.toast("请输入4-16位字符！",{duration:"long"});
 			}else if(RegName.test($(".mui-input-clear").val()) == false){
-				mui.alert("必须以字母或汉字开头！");
+				//mui.alert("必须以字母或汉字开头！");
+				plus.nativeUI.toast("必须以字母或汉字开头！",{duration:"long"});
 			}else {
 				var valueName = $(".mui-input-clear").val();
 				//console.log(valueName);
@@ -129,6 +131,5 @@
 			
 		});
 		var RegName = /^[a-zA-Z\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]*$/;
-
 	</script>
 </html>

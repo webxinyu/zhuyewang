@@ -480,7 +480,8 @@
 				"refer": [
 					"html/home/subpage/myInformation/changeTheUserName.html",
 					"html/home/subpage/myInformation/birthday.html",
-					"html/home/subpage/myInformation/headSculpture.html"
+					"html/home/subpage/myInformation/headSculpture.html",
+					"html/home/subpage/myInformation/shippingAddress.html"
 				],
 				"priority": 0
 			},
@@ -516,6 +517,32 @@
 					"js/immersed.js",
 					"js/common.js",
 					"css/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/subpage/myInformation/shippingAddress.html": {
+				"resources": [
+					"js/common.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"js/mui.min.js"
+				],
+				"refer": [
+					"html/home/subpage/myInformation/newAddress.html"
+				],
+				"priority": 0
+			},
+			"html/home/subpage/myInformation/newAddress.html": {
+				"resources": [
+					"css/mui.min.css",
+					"js/mui.picker.min.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"js/city.data-3.js",
+					"css/mui.poppicker.css",
+					"css/mui.picker.min.css",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0

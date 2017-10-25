@@ -97,7 +97,7 @@
 		        </a>
 		    </li>
 		    <li class="mui-table-view-cell">
-		        <a class="mui-navigate-right">
+		        <a class="mui-navigate-right" id="toShippingAddress">
 		        	收货地址
 		        	<span class="setPersonal" id="">
 			        	修改/添加
@@ -170,6 +170,13 @@
 			    extras:{
 			       name:toNicknameVal,
 			    }
+			});
+		});
+		document.getElementById('toShippingAddress').addEventListener('tap', function() {
+			//打开收货地址页
+			mui.openWindow({
+			    url: 'shippingAddress.html', 
+			    id:'toShippingAddress',
 			});
 		});
 		
