@@ -403,7 +403,8 @@
 					"js/mui.pullToRefresh.material.js"
 				],
 				"refer": [
-					"html/home/subpage/setUp.html"
+					"html/home/subpage/setUp.html",
+					"html/news/newsHome.html"
 				],
 				"priority": 0
 			},
@@ -447,9 +448,12 @@
 					"css/iconfont.css",
 					"images/index/hottwo01.png",
 					"css/footer.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/home/subpage/favorite/favorite.html"
+				],
 				"priority": 0
 			},
 			"html/home/subpage/setUp.html": {
@@ -597,6 +601,21 @@
 				"resources": [
 					"css/mui.min.css",
 					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/subpage/favorite/favorite.html": {
+				"resources": [
+					"js/jquery-2.1.1.min.js",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/mui.picker.min.css",
+					"images/home/cbd.jpg",
+					"images/home/shuijiao.jpg",
+					"images/home/muwu.jpg",
+					"images/home/yuantiao.jpg"
 				],
 				"refer": [],
 				"priority": 0

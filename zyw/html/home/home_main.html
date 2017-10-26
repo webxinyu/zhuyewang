@@ -31,11 +31,11 @@
 				</div>
 				<!-- 搜藏  评价  清单 -->
 				<ul class="topNav">
-					<li>
+					<li id="toFavorite">
 						<p><i class="iconfont icon-shoucang"></i></p>
 						<p>收藏</p>
 					</li>
-					<li>
+					<li id="toStore">
 						<p><i class="iconfont icon-dianpu1"></i></p>
 						<p>关注店铺</p>
 					</li>
@@ -154,6 +154,7 @@
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -184,6 +185,24 @@
 //					mui('#pullrefresh').pullRefresh().pullupLoading();
 //				});
 //			}
+		</script>
+		<script type="text/javascript">
+			/* 页面跳转 */
+			document.getElementById('toFavorite').addEventListener('tap', function() {
+				//打开收藏夹页
+				mui.openWindow({
+				    url: 'subpage/favorite/favorite.html', 
+				    id:'toFavorite',
+				});
+			});
+			document.getElementById('toStore').addEventListener('tap', function() {
+				//打开店铺关注页
+				mui.openWindow({
+				    url: 'subpage/store.html', 
+				    id:'toStore',
+				});
+			});
+			
 		</script>
 	</body>
 

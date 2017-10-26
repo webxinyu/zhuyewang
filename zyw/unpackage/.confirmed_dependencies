@@ -211,7 +211,8 @@
 		"refer": [
 			"index.html",
 			"html/home/home_main.html",
-			"html/home/subpage/setUp.html"
+			"html/home/subpage/setUp.html",
+			"html/news/newsHome.html"
 		]
 	},
 	"home.html": {
@@ -250,9 +251,12 @@
 			"css/iconfont.css",
 			"images/index/hottwo01.png",
 			"css/footer.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/common.js"
 		],
-		"refer": []
+		"refer": [
+			"html/home/subpage/favorite/favorite.html"
+		]
 	},
 	"html/home/subpage/setUp.html": {
 		"resources": [
@@ -383,6 +387,19 @@
 		"resources": [
 			"css/mui.min.css",
 			"js/mui.min.js"
+		]
+	},
+	"html/home/subpage/favorite/favorite.html": {
+		"resources": [
+			"js/jquery-2.1.1.min.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/mui.picker.min.css",
+			"images/home/cbd.jpg",
+			"images/home/shuijiao.jpg",
+			"images/home/muwu.jpg",
+			"images/home/yuantiao.jpg"
 		]
 	}
 }
