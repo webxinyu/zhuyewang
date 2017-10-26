@@ -244,7 +244,8 @@
 					"orders.html",
 					"tab-webview-subpage-setting.html",
 					"tab-webview-subpage-chat.html",
-					"tab-webview-subpage-contact.html"
+					"tab-webview-subpage-contact.html",
+					"html/home/subpage/currency/guide.html"
 				],
 				"priority": 0
 			},
