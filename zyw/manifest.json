@@ -452,7 +452,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"html/home/subpage/favorite/favorite.html"
+					"html/home/subpage/favorite/favorite.html",
+					"html/home/subpage/store.html"
 				],
 				"priority": 0
 			},
@@ -616,6 +617,18 @@
 					"images/home/shuijiao.jpg",
 					"images/home/muwu.jpg",
 					"images/home/yuantiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/subpage/store.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/common.js",
+					"images/index/preferredFruit.png",
+					"fonts/mui.ttf",
+					"css/iconfont.css"
 				],
 				"refer": [],
 				"priority": 0
