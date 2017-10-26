@@ -369,9 +369,12 @@
 					"css/localInformation/localInformation.css",
 					"images/index/hottwo01.png",
 					"images/index/delicateVegetables.png",
-					"images/index/hottwo02.png"
+					"images/index/hottwo02.png",
+					"js/vue.min.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/localInformation/detail.html"
+				],
 				"priority": 0
 			},
 			"html/microShow/microShow.html": {
@@ -453,7 +456,9 @@
 				],
 				"refer": [
 					"html/home/subpage/favorite/favorite.html",
-					"html/home/subpage/store.html"
+					"html/home/subpage/store.html",
+					"html/home/subpage/myorders/myOrders.html",
+					"html/home/subpage/myInformation/myInformation.html"
 				],
 				"priority": 0
 			},
@@ -629,6 +634,28 @@
 					"images/index/preferredFruit.png",
 					"fonts/mui.ttf",
 					"css/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/subpage/myorders/myOrders.html": {
+				"resources": [
+					"js/mui.pullToRefresh.js",
+					"js/mui.min.js",
+					"js/mui.pullToRefresh.material.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/localInformation/detail.html": {
+				"resources": [
+					"html/localInformation/list-to-detail.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"html/localInformation/vue.min.js"
 				],
 				"refer": [],
 				"priority": 0

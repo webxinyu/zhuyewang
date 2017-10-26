@@ -20,7 +20,7 @@
 				
 				<!-- content begin -->
 				<!-- 个人信息 -->
-				<div class="personalInformation">
+				<div class="personalInformation" id="personalInformation">
 					<div class="headSculpture">
 						<img src="../../images/index/hottwo01.png"/>
 					</div>
@@ -52,19 +52,19 @@
 						</span>
 					</h2>
 					<ul>
-						<li>
+						<li id="toObligation">
 							<p>
 								<i class="iconfont icon-31daifukuan"></i>
 								<b>2</b>
 							</p>
-							<p>代付款</p>
+							<p>待付款</p>
 						</li>
 						<li>
 							<p>
 								<i class="iconfont icon-31daifahuo"></i>
 								<b>2</b>
 							</p>
-							<p>代发货</p>
+							<p>待发货</p>
 						</li>
 						<li>
 							<p>
@@ -202,6 +202,21 @@
 				    id:'toStore',
 				});
 			});
+			/*打开我的订单页面*/
+			document.getElementById('toObligation').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'toObligation',
+				});
+			});
+			/*打开我的订单页面*/
+			document.getElementById('personalInformation').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myInformation/myInformation.html', 
+				    id:'personalInformation',
+				});
+			});
+			
 			
 		</script>
 	</body>
