@@ -262,7 +262,8 @@
 			"html/home/subpage/favorite/favorite.html",
 			"html/home/subpage/store.html",
 			"html/home/subpage/myorders/myOrders.html",
-			"html/home/subpage/myInformation/myInformation.html"
+			"html/home/subpage/myInformation/myInformation.html",
+			"html/home/subpage/myorders/refundAfterSale.html"
 		]
 	},
 	"html/home/subpage/setUp.html": {
@@ -428,7 +429,10 @@
 			"css/mui.min.css",
 			"css/iconfont.css",
 			"js/jquery-2.1.1.min.js",
-			"images/index/hottwo01.png"
+			"images/index/hottwo01.png",
+			"images/index/celeals.png",
+			"images/home/muwu.jpg",
+			"images/home/yuantiao.jpg"
 		]
 	},
 	"html/localInformation/detail.html": {
@@ -437,6 +441,18 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"html/localInformation/vue.min.js"
+		]
+	},
+	"html/home/subpage/myorders/refundAfterSale.html": {
+		"resources": [
+			"css/mui.picker.min.css",
+			"css/mui.min.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"images/home/cbd.jpg",
+			"images/home/muwu.jpg",
+			"images/home/yuantiao.jpg"
 		]
 	}
 }
