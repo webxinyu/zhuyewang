@@ -47,7 +47,7 @@
 				<section class="myOrder">
 					<h2>
 						我的订单
-						<span id="" class="moreOrders">
+						<span id="moreOrders" class="moreOrders">
 							查看更多订单&nbsp;&nbsp;&gt;
 						</span>
 					</h2>
@@ -59,28 +59,21 @@
 							</p>
 							<p>待付款</p>
 						</li>
-						<li>
-							<p>
-								<i class="iconfont icon-31daifahuo"></i>
-								<b>2</b>
-							</p>
-							<p>待发货</p>
-						</li>
-						<li>
+						<li id="toGoodsToBeReceived">
 							<p>
 								<i class="iconfont icon-31daishouhuo"></i>
 								<b>2</b>
 							</p>
 							<p>待收货</p>
 						</li>
-						<li>
+						<li id="toPendingEvaluation">
 							<p>
 								<i class="iconfont icon-evaluate_fill"></i>
 								<b>2</b>
 							</p>
 							<p>待评价</p>
 						</li>
-						<li>
+						<li id="toRefundAfterSale">
 							<p>
 								<i class="iconfont icon-tuikuan"></i>
 								<b>2</b>
@@ -203,20 +196,62 @@
 				});
 			});
 			/*打开我的订单页面*/
-			document.getElementById('toObligation').addEventListener('tap', function() {
-				mui.openWindow({
-				    url: 'subpage/myorders/myOrders.html', 
-				    id:'toObligation',
-				});
-			});
-			/*打开我的订单页面*/
 			document.getElementById('personalInformation').addEventListener('tap', function() {
 				mui.openWindow({
 				    url: 'subpage/myInformation/myInformation.html', 
 				    id:'personalInformation',
 				});
 			});
-			
+			/*打开我的订单“全部订单”*/
+			document.getElementById('moreOrders').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'moreOrders',
+				    extras:{
+				       name:'moreOrders',
+				    }
+				});
+			});
+			/*打开我的订单“待付款”*/
+			document.getElementById('toObligation').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'toObligation',
+				    extras:{
+				       name:'toObligation',
+				    }
+				});
+			});
+			/*打开我的订单“待收货”*/
+			document.getElementById('toGoodsToBeReceived').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'toGoodsToBeReceived',
+				    extras:{
+				       name:'toGoodsToBeReceived',
+				    }
+				});
+			});
+			/*打开我的订单“待评价”*/
+			document.getElementById('toPendingEvaluation').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'toPendingEvaluation',
+				    extras:{
+				       name:'toPendingEvaluation',
+				    }
+				});
+			});
+			/*打开我的订单“退款/售后”*/
+			document.getElementById('toRefundAfterSale').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'subpage/myorders/myOrders.html', 
+				    id:'toRefundAfterSale',
+				    extras:{
+				       name:'toRefundAfterSale',
+				    }
+				});
+			});
 			
 		</script>
 	</body>

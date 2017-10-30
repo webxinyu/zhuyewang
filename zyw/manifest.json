@@ -646,7 +646,9 @@
 					"js/mui.pullToRefresh.material.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/iconfont.css"
+					"css/iconfont.css",
+					"js/jquery-2.1.1.min.js",
+					"images/index/hottwo01.png"
 				],
 				"refer": [],
 				"priority": 0

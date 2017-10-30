@@ -3,12 +3,13 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>我的订单</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../../css/iconfont.css"/>
 		<style>
 			html,
 			body {
@@ -83,6 +84,81 @@
 			.mui-slider-indicator.mui-segmented-control {
 				background-color: #efeff4;
 			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #f5f5f5;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+				padding: 0 12px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #4cd964;
+			}
+			.mui-table-view-cell {
+				padding: 0;
+			}
+			.orderTitle {				/* 订单标题 */
+				height: 40px;
+				line-height: 40px;
+				background: #fff;
+				padding: 0 10px;
+				display: flex;
+				font-size: 16px;
+			}
+			.orderTitle>span:nth-of-type(1) {
+				flex: 20;
+				text-align: left;
+			}
+			.orderTitle>span:nth-of-type(2) {
+				flex: 1;
+				text-align: center;
+			}
+			.orderDetail {					/* 商品简介 */
+				height: 80px;
+				padding: 10px;
+				display: flex;
+				background: #eee;
+			}
+			.orderDetailImg {
+				flex: 1;
+			}
+			.orderDetailText {
+				flex: 3;
+			}
+			.orderDetailPrice {				/* 数量及价钱 */
+				height: 40px;
+				line-height: 40px;
+				padding: 0 10px;
+				text-align: right;
+			}
+			.orderDetailPrice>i {
+				font-style: normal;
+			}
+			.orderDetailPrice>span {
+				font-size: 18px;
+			}
+			.orderDetailOthers {			/* 更多选项 */
+				height: 41px;
+				padding: 5px 10px;
+				text-align: right;
+				border-top: 1px #eee solid;
+			}
+			.orderDetailOthers>span {
+				height: 30px;
+				line-height: 30px;
+				width: 80px;
+				text-align: center;
+				border-radius: 3px;
+				display: inline-block;
+				margin-left: 10px;
+			}
+			.orderDetailOthers>span:nth-of-type(1) {
+				border: 1px #333 solid;
+				color: #333;
+			}
+			.orderDetailOthers>span:nth-of-type(2) {
+				border: 1px #f00 solid;
+				color: #f00;
+			}
 		</style>
 	</head>
 
@@ -95,90 +171,105 @@
 			<div id="slider" class="mui-slider mui-fullscreen">
 				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll">
-						<a class="mui-control-item mui-active" href="#item1mobile">
-							推荐
+						<a id="allOrders" class="mui-control-item" href="#item1mobile">
+							全部
 						</a>
-						<a class="mui-control-item" href="#item2mobile">
-							热点
+						<a id="obligation" class="mui-control-item" href="#item2mobile">
+							待付款
 						</a>
-						<a class="mui-control-item" href="#item3mobile">
-							北京
+						<a id="goodsToBeReceived" class="mui-control-item" href="#item3mobile">
+							待收货
 						</a>
-						<a class="mui-control-item" href="#item4mobile">
-							社会
+						<a id="pendingEvaluation" class="mui-control-item" href="#item4mobile">
+							待评价
 						</a>
-						<a class="mui-control-item" href="#item5mobile">
-							娱乐
-						</a>
-						<a class="mui-control-item" href="#item6mobile">
-							科技
+						<a id="refundAfterSale" class="mui-control-item" href="#item5mobile">
+							退款/售后
 						</a>
 					</div>
 				</div>
 				<div class="mui-slider-group">
-					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="item1mobile" class="mui-slider-item mui-control-content">
 						<div id="scroll1" class="mui-scroll-wrapper">
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
 									<li class="mui-table-view-cell">
-										第1个选项卡子项-1
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第1个选项卡子项-2
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第1个选项卡子项-3
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第1个选项卡子项-20
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -189,65 +280,84 @@
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
 									<li class="mui-table-view-cell">
-										第2个选项卡子项-1
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第2个选项卡子项-2
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第2个选项卡子项-3
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第2个选项卡子项-20
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -257,65 +367,84 @@
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
 									<li class="mui-table-view-cell">
-										第3个选项卡子项-1
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第3个选项卡子项-2
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第3个选项卡子项-3
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第3个选项卡子项-20
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -325,65 +454,84 @@
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
 									<li class="mui-table-view-cell">
-										第4个选项卡子项-1
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第4个选项卡子项-2
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第4个选项卡子项-3
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第4个选项卡子项-20
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -393,133 +541,84 @@
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
 									<li class="mui-table-view-cell">
-										第5个选项卡子项-1
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第5个选项卡子项-2
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
 									<li class="mui-table-view-cell">
-										第5个选项卡子项-3
+										<div class="orderTitle">
+											<span id="">
+												<i class="iconfont icon-shop"></i>
+												竹叶网自营店&nbsp;&nbsp;&gt;	
+											</span>
+											<span id="delOrder">
+												<i class="iconfont icon-delete_light"></i>
+											</span>
+										</div>
+										<div class="orderDetail">
+											<div class="orderDetailImg">
+												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+											</div>
+											<div class="orderDetailText">
+												苹果是一种营养价值非常高的水果，含有丰富的维生素。
+											</div>
+										</div>
+										<div class="orderDetailPrice">
+											共<i>1</i>件商品&nbsp;实付款：<span id="orderPrice">&yen;35.80</span>
+										</div>
+										<div class="orderDetailOthers">
+											<span id="">评价晒单</span>
+											<span id="">再次购买</span>
+										</div>
 									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第5个选项卡子项-20
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div id="item6mobile" class="mui-slider-item mui-control-content">
-						<div class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-								<ul class="mui-table-view">
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-1
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-2
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-3
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-4
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-5
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-6
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-7
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-8
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-9
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-10
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-11
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-12
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-13
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-14
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-15
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-16
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-17
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-18
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-19
-									</li>
-									<li class="mui-table-view-cell">
-										第6个选项卡子项-20
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -530,6 +629,7 @@
 		<script src="../../../../js/mui.min.js"></script>
 		<script src="../../../../js/mui.pullToRefresh.js"></script>
 		<script src="../../../../js/mui.pullToRefresh.material.js"></script>
+		<script src="../../../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init();
 			(function($) {
@@ -580,6 +680,37 @@
 					};
 				});
 			})(mui);
+		</script>
+		<script type="text/javascript">
+			mui.plusReady(function(){
+				var self = plus.webview.currentWebview();
+				var name = self.name;
+				if (name == "moreOrders") {	//全部订单
+					$("#allOrders").addClass("mui-active");
+					$(".mui-slider-group").css("transform","translate3d(0px, 0px, 0px) translateZ(0px)");
+					$("#item1mobile").addClass("mui-active");
+				}
+				if (name == "toObligation") {		//待付款				
+					$("#obligation").addClass("mui-active");
+					$(".mui-slider-group").css("transform","translate3d(-100vw, 0px, 0px) translateZ(0px)");
+					$("#item2mobile").addClass("mui-active");
+				}
+				if (name == "toGoodsToBeReceived") {		//待收货
+					 $("#goodsToBeReceived").addClass("mui-active");
+					 $(".mui-slider-group").css("transform","translate3d(-200vw, 0px, 0px) translateZ(0px)");
+					$("#item3mobile").addClass("mui-active");
+				}
+				if (name == "toPendingEvaluation") {		//待评价
+					$("#pendingEvaluation").addClass("mui-active");
+					$(".mui-slider-group").css("transform","translate3d(-300vw, 0px, 0px) translateZ(0px)");
+					$("#item4mobile").addClass("mui-active");
+				}
+				if (name == "toRefundAfterSale") {			//退款/售后
+					$("#refundAfterSale").addClass("mui-active");
+					$(".mui-slider-group").css("transform","translate3d(-400vw, 0px, 0px) translateZ(0px)");
+					$("#item5mobile").addClass("mui-active");
+				}
+			});
 		</script>
 	</body>
 
