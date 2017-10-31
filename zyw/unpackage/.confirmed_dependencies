@@ -59,7 +59,8 @@
 			"tab-webview-subpage-setting.html",
 			"tab-webview-subpage-chat.html",
 			"tab-webview-subpage-contact.html",
-			"html/home/subpage/currency/guide.html"
+			"html/home/subpage/currency/guide.html",
+			"html/home/subpage/myorders/myOrders.html"
 		]
 	},
 	"qrcode.html": {
@@ -216,7 +217,8 @@
 			"index.html",
 			"html/home/home_main.html",
 			"html/home/subpage/setUp.html",
-			"html/news/newsHome.html"
+			"html/news/newsHome.html",
+			"html/home/subpage/myorders/myOrders.html"
 		]
 	},
 	"home.html": {
@@ -460,10 +462,12 @@
 		"resources": [
 			"html/login/css/mui.min.css",
 			"html/login/js/app.js",
-			"html/login/js/mui.min.js"
+			"html/login/js/mui.min.js",
+			"html/home/home.html"
 		],
 		"refer": [
-			"html/login/setting.html"
+			"html/login/setting.html",
+			"html/home/home.html"
 		]
 	},
 	"html/login/login.html": {
@@ -476,12 +480,17 @@
 			"html/login/css/mui.min.css",
 			"html/login/js/mui.enterfocus.js",
 			"html/login/images/weixin.png",
-			"html/login/fonts/mui.ttf"
+			"html/login/fonts/mui.ttf",
+			"js/common.js"
 		],
 		"refer": [
 			"html/login/main.html",
 			"html/login/reg.html",
-			"html/login/forget_password.html"
+			"html/login/forget_password.html",
+			"html/home/home.html",
+			"html/home/home_main.html",
+			"html/login/unlock.html",
+			"index.html"
 		]
 	},
 	"html/login/setting.html": {
@@ -495,7 +504,10 @@
 			"html/login/libs/easymob-webim-sdk/jquery-1.11.1.js",
 			"html/login/css/feedback-page.css",
 			"html/login/fonts/mui.ttf",
-			"html/login/js/feedback-page.js"
+			"html/login/js/feedback-page.js",
+			"html/login/js/app.js",
+			"html/login/js/mui.min.js",
+			"html/login/css/mui.min.css"
 		]
 	},
 	"html/login/reg.html": {
@@ -503,7 +515,8 @@
 			"html/login/css/style.css",
 			"html/login/css/mui.min.css",
 			"html/login/js/app.js",
-			"html/login/js/mui.min.js"
+			"html/login/js/mui.min.js",
+			"html/login/fonts/mui.ttf"
 		],
 		"refer": [
 			"html/login/login.html"
@@ -514,7 +527,13 @@
 			"html/login/css/style.css",
 			"html/login/css/mui.min.css",
 			"html/login/js/app.js",
-			"html/login/js/mui.min.js"
+			"html/login/js/mui.min.js",
+			"html/login/fonts/mui.ttf"
+		]
+	},
+	"html/login/unlock.html": {
+		"resources": [
+			"html/login/js/mui.locker.js"
 		]
 	}
 }

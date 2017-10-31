@@ -604,7 +604,7 @@
 					<a href="javascript:void(0);">
 						<div class="topTitle">
 							<h4>旅游感悟&nbsp;&nbsp;<span>微秀场<i class="iconfont icon-bofang"></i></span></h4>
-							<h6>每一段旅行都是人生的一种修行</h6>
+							<h6>每一段旅行都是人生的一种修行,在每一场的修行过程中，我们都会遇到一些难忘的人和事</h6>
 						</div>
 						<div class="showTime">
 							<img src="images/index/microShow01.png"/>
@@ -615,7 +615,7 @@
 					<a href="javascript:void(0);">
 						<div class="topTitle">
 							<h4>旅游感悟&nbsp;&nbsp;<span>微秀场<i class="iconfont icon-bofang"></i></span></h4>
-							<h6>每一段旅行都是人生的一种修行</h6>
+							<h6>每一段旅行都是人生的</h6>
 						</div>
 						<div class="showTime">
 							<img src="images/index/microShow02.png"/>
@@ -636,7 +636,7 @@
 			<span><i class="iconfont icon-zhinan"></i></span>
 			<span>发现</span>
 		</a>
-		<a href="javascript:void(0);">
+		<a id="toAllOrders" href="javascript:void(0);">
 			<span><i class="iconfont icon-wodedingdan"></i></span>
 			<span>订单</span>
 		</a>
@@ -730,7 +730,16 @@
 		    id:'toPersonal'
 		  });
 		});
-		
+		/*打开我的订单“全部订单”*/
+		document.getElementById('toAllOrders').addEventListener('tap', function() {
+			mui.openWindow({
+			    url: 'html/home/subpage/myorders/myOrders.html', 
+			    id:'toAllOrders',
+			    extras:{
+			       name:'moreOrders',
+			    }
+			});
+		});
 	</script>
 	<script type="text/javascript">
 		mui.plusReady(function() {

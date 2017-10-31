@@ -32,7 +32,7 @@
 			<span><i class="iconfont icon-zhinan"></i></span>
 			<span>发现</span>
 		</a>
-		<a href="javascript:void(0);">
+		<a id="toAllOrders" href="javascript:void(0);">
 			<span><i class="iconfont icon-wodedingdan"></i></span>
 			<span>订单</span>
 		</a>
@@ -92,6 +92,15 @@
 			    id:'tonews',
 			});
 		});
-		
+		/*打开我的订单“全部订单”*/
+		document.getElementById('toAllOrders').addEventListener('tap', function() {
+			mui.openWindow({
+			    url: 'subpage/myorders/myOrders.html', 
+			    id:'toAllOrders',
+			    extras:{
+			       name:'moreOrders',
+			    }
+			});
+		});
 	</script>
 </html>
