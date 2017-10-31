@@ -20,13 +20,18 @@
 				
 				<!-- content begin -->
 				<!-- 个人信息 -->
-				<div class="personalInformation" id="personalInformation">
+				<div class="personalInformation">
 					<div class="headSculpture">
 						<img src="../../images/index/hottwo01.png"/>
 					</div>
-					<div class="information">
+					<!-- 个人信息 -->
+					<div class="information" id="personalInformation" style="display: none;">
 						<p><span>webxinyu</span><i class="iconfont icon-liwu"></i></p>
 						<p>个人信息&gt;</p>
+					</div>
+					<!-- 点击登录 -->
+					<div class="toLogin" id="toLogin">
+						<p>点击登录</p>
 					</div>
 				</div>
 				<!-- 搜藏  评价  清单 -->
@@ -250,6 +255,13 @@
 				    extras:{
 				       name:'toRefundAfterSale',
 				    }
+				});
+			});
+			/*进入登录页面*/
+			document.getElementById('toLogin').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: '../login/login.html', 
+				    id:'toLogin'
 				});
 			});
 			

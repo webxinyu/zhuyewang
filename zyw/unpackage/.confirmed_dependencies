@@ -263,7 +263,8 @@
 			"html/home/subpage/store.html",
 			"html/home/subpage/myorders/myOrders.html",
 			"html/home/subpage/myInformation/myInformation.html",
-			"html/home/subpage/myorders/refundAfterSale.html"
+			"html/home/subpage/myorders/refundAfterSale.html",
+			"html/login/login.html"
 		]
 	},
 	"html/home/subpage/setUp.html": {
@@ -453,6 +454,67 @@
 			"images/home/cbd.jpg",
 			"images/home/muwu.jpg",
 			"images/home/yuantiao.jpg"
+		]
+	},
+	"html/login/main.html": {
+		"resources": [
+			"html/login/css/mui.min.css",
+			"html/login/js/app.js",
+			"html/login/js/mui.min.js"
+		],
+		"refer": [
+			"html/login/setting.html"
+		]
+	},
+	"html/login/login.html": {
+		"resources": [
+			"html/login/js/app.js",
+			"html/login/images/sinaweibo.png",
+			"html/login/js/mui.min.js",
+			"html/login/css/style.css",
+			"html/login/images/qq.png",
+			"html/login/css/mui.min.css",
+			"html/login/js/mui.enterfocus.js",
+			"html/login/images/weixin.png",
+			"html/login/fonts/mui.ttf"
+		],
+		"refer": [
+			"html/login/main.html",
+			"html/login/reg.html",
+			"html/login/forget_password.html"
+		]
+	},
+	"html/login/setting.html": {
+		"resources": [
+			"html/login/js/mui.locker.js",
+			"html/login/libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"html/login/libs/easymob-webim-sdk/json2.js",
+			"html/login/libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"html/login/js/feedback.js",
+			"html/login/js/mui.view.js",
+			"html/login/libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"html/login/css/feedback-page.css",
+			"html/login/fonts/mui.ttf",
+			"html/login/js/feedback-page.js"
+		]
+	},
+	"html/login/reg.html": {
+		"resources": [
+			"html/login/css/style.css",
+			"html/login/css/mui.min.css",
+			"html/login/js/app.js",
+			"html/login/js/mui.min.js"
+		],
+		"refer": [
+			"html/login/login.html"
+		]
+	},
+	"html/login/forget_password.html": {
+		"resources": [
+			"html/login/css/style.css",
+			"html/login/css/mui.min.css",
+			"html/login/js/app.js",
+			"html/login/js/mui.min.js"
 		]
 	}
 }
