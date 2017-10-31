@@ -60,7 +60,8 @@
 			"tab-webview-subpage-chat.html",
 			"tab-webview-subpage-contact.html",
 			"html/home/subpage/currency/guide.html",
-			"html/home/subpage/myorders/myOrders.html"
+			"html/home/subpage/myorders/myOrders.html",
+			"html/fineFruit/fineFruit.html"
 		]
 	},
 	"qrcode.html": {
@@ -534,6 +535,25 @@
 	"html/login/unlock.html": {
 		"resources": [
 			"html/login/js/mui.locker.js"
+		]
+	},
+	"html/fineFruit/fineFruit.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/iconfont.css",
+			"js/common.js",
+			"fonts/mui.ttf",
+			"images/index/hottwo01.png",
+			"images/banner3.png",
+			"images/banner2.png",
+			"images/index/hotthree03.png",
+			"images/banner1.png",
+			"images/index/delicateVegetables.png",
+			"images/index/hotthree01.png",
+			"images/index/celeals.png",
+			"images/index/hotthree02.png",
+			"images/index/hottwo02.png"
 		]
 	}
 }
