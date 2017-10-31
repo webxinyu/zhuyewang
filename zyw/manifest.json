@@ -789,6 +789,16 @@
 					"images/index/hotthree02.png",
 					"images/index/hottwo02.png"
 				],
+				"refer": [
+					"html/fineFruit/fineDetail.html"
+				],
+				"priority": 0
+			},
+			"html/fineFruit/fineDetail.html": {
+				"resources": [
+					"css/iconfont.css",
+					"css/mui.min.css"
+				],
 				"refer": [],
 				"priority": 0
 			}

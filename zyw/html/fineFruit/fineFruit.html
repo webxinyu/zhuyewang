@@ -115,7 +115,7 @@
 			<!-- 精品水果列表 -->
 			<section class="fineFruitList">
 				<ul>
-					<li id="toDetail">
+					<li id="toFineDetail">
 						<div class="listTop">
 							<img src="../../images/banner3.png"/>
 							<p>精品水果，每一个都是精挑细选</p>
@@ -246,7 +246,13 @@
 					mui.toast("为你推荐了5篇文章");
 				}, 1500);
 			}
-
+			document.getElementById('toFineDetail').addEventListener('tap', function() {
+				//打开首页
+				mui.openWindow({
+				    url: 'fineDetail.html', 
+				    id:'toFineDetail'
+				});
+			});
 		</script>
 	</body>
 </html>

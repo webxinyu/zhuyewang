@@ -554,6 +554,15 @@
 			"images/index/celeals.png",
 			"images/index/hotthree02.png",
 			"images/index/hottwo02.png"
+		],
+		"refer": [
+			"html/fineFruit/fineDetail.html"
+		]
+	},
+	"html/fineFruit/fineDetail.html": {
+		"resources": [
+			"css/iconfont.css",
+			"css/mui.min.css"
 		]
 	}
 }
