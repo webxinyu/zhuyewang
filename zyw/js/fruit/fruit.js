@@ -17,32 +17,19 @@ window.onload = function(){
 		var firstcontain = document.getElementById("firstcontain");
 		var secondcontain = document.getElementById("secondcontain");
 		if (name == "toFruit") {							//水果
-			fruitBtn.style.borderBottomColor = "#2AC845";
-			fruitBtn.style.fontSize = "16px";
-			fruitBtn.style.color = "#2AC845";
-			$("#firstcontain").css("display","block");
-			$("#firstcontain").siblings().css("display","none");
+			
 		}			
 		if (name == "toVegetable") {						//蔬菜
-			vegetableBtn.style.borderBottomColor = "#2AC845"; 
-			vegetableBtn.style.fontSize = "16px";
-			vegetableBtn.style.color = "#2AC845";
-			$("#secondcontain").css("display","block");
-			$("#secondcontain").siblings().css("display","none");
+			console.log("aaaaaaa");
+				//document.getElementById("vegetableBtna").click();
+				console.log("bbbbbbbbb");
+			
 		}
 		if (name == "toRQ") {								//肉禽
-			rqBtn.style.borderBottomColor = "#2AC845";
-			rqBtn.style.fontSize = "16px";
-			rqBtn.style.color = "#2AC845";
-    		$("#thirdcontain").css("display","block");
-			$("#thirdcontain").siblings().css("display","none");
+			
 		}
 		if (name == "toCereals") {							//五谷杂粮
-			cerealsBtn.style.borderBottomColor = "#2AC845";
-			cerealsBtn.style.fontSize = "16px";
-			cerealsBtn.style.color = "#2AC845";
-    		$("#forthcontain").css("display","block");
-			$("#forthcontain").siblings().css("display","none");
+			
 		}
 	});
 }
