@@ -61,7 +61,8 @@
 			"tab-webview-subpage-contact.html",
 			"html/home/subpage/currency/guide.html",
 			"html/home/subpage/myorders/myOrders.html",
-			"html/fineFruit/fineFruit.html"
+			"html/fineFruit/fineFruit.html",
+			"html/fruit/produce_main.html"
 		]
 	},
 	"qrcode.html": {
@@ -563,6 +564,15 @@
 		"resources": [
 			"css/iconfont.css",
 			"css/mui.min.css"
+		]
+	},
+	"html/fruit/produce_main.html": {
+		"resources": [
+			"html/fruit/tab-top-subpage-1.html"
+		],
+		"refer": [
+			"html/fruit/tab-top-subpage-1.html",
+			"html/fruit/tab-top-subpage-2.html"
 		]
 	}
 }

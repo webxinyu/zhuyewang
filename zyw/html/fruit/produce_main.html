@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新鲜水果</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    	<link href="../../css/mui.min.css" rel="stylesheet"/>
+    	<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+    	<link rel="stylesheet" type="text/css" href="../../css/fruit/fruitIndex.css"/>
+	</head>
+
+	<body>
+
+		<style>
+			.mui-control-content {
+				background-color: white;
+				min-height: 500px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.mui-col-xs-4 {
+				width: 25%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+			    background-color: #4cd964;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #4cd964;
+			}
+			.mui-table-view {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.mui-table-view>.mui-table-view-cell {
+				width: 50%;
+				border-right: 1px #eee solid;
+				background: #fff;
+				height: 222px;
+			}
+			.mui-table-view>.mui-table-view-cell>.alink {
+				display: block;
+				padding: 10px 15px;
+				height: 220px;
+				position: relative;		
+			} 
+			.mui-table-view>.mui-table-view-cell>.alink>.shopPic {				/* 商品图片 */
+				height: 120px;
+				width: 100%;
+				text-align: center;
+			}
+			.mui-table-view>.mui-table-view-cell>.alink>.shopPic>img {
+				width: 120px;
+				height: 120px;
+			}
+			.mui-table-view>.mui-table-view-cell>.alink>.abstract {					/* 商品介绍 */
+				height: 30px;
+				line-height: 15px;
+				font-size: 12px;
+				width: 100%;
+				word-break: break-all;
+			    text-overflow: ellipsis;
+			    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			    -webkit-line-clamp: 2; /** 显示的行数 **/
+				overflow: hidden;
+				margin-bottom: 7px;
+				margin-top: 7px;
+				white-space: normal;
+			}
+			.mui-table-view>.mui-table-view-cell>.alink>.priceAndShoppingcart {					/* 价格 */
+				height: 20px;
+				border: 1px #2AC845 solid;
+				display: flex;	
+			}
+			.mui-table-view>.mui-table-view-cell>.alink>.priceAndShoppingcart>span {
+				font-size: 12px;
+				color: #2AC845;
+				height: 18px;
+				line-height: 18px;
+				flex: 1;
+				text-align: center;
+			}
+			.mui-table-view>.mui-table-view-cell>.alink>.priceAndShoppingcart>span:last-of-type {
+				color: #fff;
+				background: #2AC845;
+			}
+			.mui-table-view-cell:after {
+				left: 0;
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav">
+			<span onclick="back()"><i class="iconfont icon-fanhui1"></i></span>
+			<span>新鲜水果</span>
+			<span>
+				<i class="iconfont icon-gouwuche1"></i>
+				<b>10</b>
+			</span>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">新鲜水果</a>
+					<a class="mui-control-item" href="#item2mobile">精品蔬菜</a>
+					<a class="mui-control-item" href="#item3mobile">安全肉禽</a>
+					<a class="mui-control-item" href="#item4mobile">五谷杂粮</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">							
+							<div class="mui-scroll">
+								<section class="shopBanner">
+									<div class="mui-slider">
+									  <div class="mui-slider-group mui-slider-loop">
+									    <!--支持循环，需要重复图片节点-->
+									    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../images/banner4.png" /></a></div>
+									    <div class="mui-slider-item"><a href="#"><img src="../../images/banner1.png" /></a></div>
+									    <div class="mui-slider-item"><a href="#"><img src="../../images/banner2.png" /></a></div>
+									    <div class="mui-slider-item"><a href="#"><img src="../../images/banner3.png" /></a></div>
+									    <div class="mui-slider-item"><a href="#"><img src="../../images/banner4.png" /></a></div>
+									    <!--支持循环，需要重复图片节点-->
+									    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../images/banner1.png" /></a></div>
+									  </div>
+									</div>
+								</section>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										<a class="alink" href="javascript:void(0);">
+											<div class="shopPic">
+												<img src="../../images/fruit/shopList.webp"/>
+											</div>
+											<p class="abstract">苹果是一种很好的水果，酸甜可口。含有丰富的维生素和各种营养物质。老少皆宜！</p>
+											<div class="priceAndShoppingcart">
+												<span id="shopPrice">￥66.66</span>
+												<span id="shoppingCart">加入购物车</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/iconfont.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/share.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/immersed.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fruit/fruit.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init({
+				swipeBack: false
+			});
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+				var html4 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第四个选项卡子项-1</li><li class="mui-table-view-cell">第四个选项卡子项-2</li><li class="mui-table-view-cell">第四个选项卡子项-3</li><li class="mui-table-view-cell">第四个选项卡子项-4</li><li class="mui-table-view-cell">第四个选项卡子项-5</li></ul>';
+				var item2 = document.getElementById('item2mobile');
+				var item3 = document.getElementById('item3mobile');
+				var item4 = document.getElementById('item4mobile');
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 3) {
+						if (item4.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item4.querySelector('.mui-scroll').innerHTML = html4;
+							}, 500);
+						}
+					}
+				});
+			})(mui);
+		</script>
+
+	</body>
+
+</html>
