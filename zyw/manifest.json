@@ -659,7 +659,9 @@
 					"images/home/muwu.jpg",
 					"images/home/yuantiao.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"html/home/subpage/myorders/orderDetails.html"
+				],
 				"priority": 0
 			},
 			"html/localInformation/detail.html": {

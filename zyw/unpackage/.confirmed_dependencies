@@ -438,6 +438,9 @@
 			"images/index/celeals.png",
 			"images/home/muwu.jpg",
 			"images/home/yuantiao.jpg"
+		],
+		"refer": [
+			"html/home/subpage/myorders/orderDetails.html"
 		]
 	},
 	"html/localInformation/detail.html": {

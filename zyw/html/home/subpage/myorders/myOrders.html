@@ -200,7 +200,7 @@
 						<div id="scroll1" class="mui-scroll-wrapper">
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
-									<li class="mui-table-view-cell">
+									<li id="toOrderDetails" class="mui-table-view-cell">
 										<div class="orderTitle">
 											<span id="">
 												<i class="iconfont icon-shop"></i>
@@ -212,7 +212,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop01.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -238,7 +238,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop02.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -264,7 +264,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/hottwo01.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop03.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -299,7 +299,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/celeals.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop04.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -325,7 +325,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/celeals.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop05.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -351,7 +351,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/index/celeals.png"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop06.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -387,7 +387,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/muwu.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop07.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -413,7 +413,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/muwu.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop08.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -439,7 +439,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/muwu.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop09.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -475,7 +475,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/yuantiao.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop10.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -501,7 +501,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/yuantiao.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop11.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -527,7 +527,7 @@
 										</div>
 										<div class="orderDetail">
 											<div class="orderDetailImg">
-												<img style="width: 60px;height: 60px;" src="../../../../images/home/yuantiao.jpg"/>
+												<img style="width: 60px;height: 60px;" src="../../../../images/shop/shop12.webp"/>
 											</div>
 											<div class="orderDetailText">
 												苹果是一种营养价值非常高的水果，含有丰富的维生素。
@@ -667,6 +667,17 @@
 					$("#item4mobile").addClass("mui-active");
 				}
 			});
+			/*打开订单详情*/
+			document.getElementById('toOrderDetails').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'orderDetails.html', 
+				    id:'toOrderDetails',
+				    extras:{
+				       name:'moreOrders',
+				    }
+				});
+			});
+			
 		</script>
 	</body>
 
