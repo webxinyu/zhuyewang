@@ -11,12 +11,15 @@
 		<link rel="stylesheet" type="text/css" href="../../../../css/iconfont.css"/>
 		<style type="text/css">
 			html,body {
-				background: #FcFcFc;
+				background: #F1F1F1;
 			}
 			ul,li {
 				list-style: none;
 				padding: 0;
 				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
 			}
 			.clearfix:after {			/* 清除浮动 */
 				content:"\200B"; 
@@ -108,17 +111,71 @@
 				padding-top: 80px;
 			}
 			.typePage>ul li {
-				margin-bottom: 17px;
+				margin-bottom: 13px;
 				background: #fff;
 				padding: 0 10px;
 			}
-			.typePage>ul li.condition {
+			.typePage>ul li.condition {						/* 订单状态 */
 				height: 70px;
 				line-height: 70px;
 				background: url(../../../../images/bg.png) no-repeat;
 				background-size: 100%;
 				color: #fff;
 				padding-left: 20px;
+			}
+			.typePage>ul li.purchaseOrderTracking {				/* 点击进入订单详情 */
+				height: 50px;
+				line-height: 50px;
+				display: flex;
+				padding: 0 10px;
+			}
+			.typePage>ul li.purchaseOrderTracking>span:nth-of-type(1) {
+				flex: 1;
+			}
+			.typePage>ul li.purchaseOrderTracking>span:nth-of-type(2) {
+				flex: 14;
+				font-size: 14px;
+			}
+			.typePage>ul li.purchaseOrderTracking>span:nth-of-type(3) {
+				flex: 1;
+				text-align: right;
+			}
+			.typePage>ul li.shippingAddress {				/* 收件人地址 */
+				height: 80px;
+				display: flex;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(1) {
+				flex: 1;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(1)>p>.iconfont {
+				color: #999;
+				font-size: 20px;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(2) {
+				flex: 13;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(1)>p:first-of-type {
+				height: 30px;
+				line-height: 30px;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(1)>p:last-of-type {
+				height: 40px;
+				line-height: 20px;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(2)>p:first-of-type {
+				height: 30px;
+				line-height: 30px;
+				font-size: 16px;
+				color: #333;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(2)>p:first-of-type>span:first-of-type {
+				margin-right: 20px;
+			}
+			.typePage>ul li.shippingAddress>span:nth-of-type(2)>p:last-of-type {
+				height: 40px;
+				line-height: 20px;
 			}
 		</style>
 	</head>
@@ -141,9 +198,20 @@
 					</span>
 				</li>
 				<li class="purchaseOrderTracking">
-					
+					<span><i class="iconfont icon-31daishouhuo"></i></span>
+					<span>感谢您在竹叶网上购物，欢迎再次光临！</span>
+					<span><i class="iconfont icon-fanhui2"></i></span>
 				</li>
-				<li></li>
+				<li class="shippingAddress">
+					<span>
+						<p><i class="iconfont icon-dingweixiao"></i></p>
+						<p></p>
+					</span>
+					<span>
+						<p><span>收件人</span><span>150****7121</span></p>
+						<p><span>地址：</span><span>上海市闵行区苏虹路，苏虹路1213弄88号楼808号</span></p>
+					</span>
+				</li>
 				<li></li>
 			</ul>
 		</section>
