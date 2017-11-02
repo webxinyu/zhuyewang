@@ -21,6 +21,9 @@
 			p {
 				margin-bottom: 0;
 			}
+			h6 {
+				margin: 0;
+			}
 			.clearfix:after {			/* 清除浮动 */
 				content:"\200B"; 
 				display:block; 
@@ -177,6 +180,87 @@
 				height: 40px;
 				line-height: 20px;
 			}
+			.typePage>ul li.orderInformation>.ordersTitle {
+				height: 45px;
+				display: flex;
+				border-bottom: 1px #eee solid;
+			}
+			.typePage>ul li.orderInformation>.ordersTitle>p {
+				flex: 1;
+				height: 44px;
+				line-height: 44px;
+				color: #333;
+			}
+			.typePage>ul li.orderInformation>.ordersTitle>p:first-of-type {
+				text-align: left;
+			}
+			.typePage>ul li.orderInformation>.ordersTitle>p:first-of-type>span:first-of-type>.iconfont {
+				color: #999;
+			}
+			.typePage>ul li.orderInformation>.ordersTitle>p:last-of-type {
+				text-align: right;
+			}
+			.typePage>ul li.orderInformation>.ordersTitle>p:last-of-type>span:last-of-type>.iconfont {
+				color: #D74B28;
+			}
+			.typePage>ul li.orderInformation>section {
+				height: 100px;
+				padding: 10px 0;
+				overflow: hidden;
+			}
+			.typePage>ul li.orderInformation>section>.imgTitle {
+				float: left;
+				text-align: center;
+				width: 20%;
+				height: 80px;
+			}
+			.typePage>ul li.orderInformation>section>.imgTitle>img {
+				height: 100%;
+				width: 90%;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail {
+				float: right;
+				width: 80%;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail>h6 {
+				height: 20px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				font-size: 14px;
+				color: #333;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail>h6>span {
+				background: #f00;
+				color: #fff;
+				display: inline-block;
+				padding:1px 3px;
+				border-radius: 2px;
+			} 
+			.typePage>ul li.orderInformation>section>.rightDetail>p {
+				height: 20px;
+				font-size: 10px;
+				color: #999;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail>.priceAndAddCart {
+				height: 50px;
+				overflow: hidden;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail>.priceAndAddCart>span {
+				height: 40px;
+				line-height: 40px;
+				float: left;
+			}
+			.typePage>ul li.orderInformation>section>.rightDetail>.priceAndAddCart>button {
+				height: 30px;
+				width: 80px;
+				float: right;
+				line-height: 30px;
+				text-align: center;
+				border: #666;
+				color: #666;
+				border-radius: 3px;
+			}
 		</style>
 	</head>
 	<body>
@@ -212,7 +296,51 @@
 						<p><span>地址：</span><span>上海市闵行区苏虹路，苏虹路1213弄88号楼808号</span></p>
 					</span>
 				</li>
-				<li></li>
+				<li class="orderInformation">
+					<div class="ordersTitle">
+						<p>
+							<span id="">
+								<i class="iconfont icon-shengriliwu"></i>
+							</span>
+							<span id="">
+								竹叶网
+							</span>
+						</p>
+						<p>
+							<span id="">
+								联系竹叶网
+							</span>
+							<span id="">
+								<i class="iconfont icon-xingqiu"></i>
+							</span>
+						</p>
+					</div>
+					<section>
+						<div class="imgTitle">
+							<img src="../../../../images/shop/shop12.webp"/>
+						</div>
+						<div class="rightDetail">
+							<h6>
+								<span id="">竹叶超市</span>
+								新鲜水果 香甜可口 绿色无公害 安全健康的饮食。
+							</h6>
+							<p>
+								<span>数量：</span>
+								<span>1</span>
+								<span>口味：</span>
+								<span>麻辣牛肉会面</span>
+							</p>
+							<div class="priceAndAddCart">
+								<span id="">
+									&yen;25.50
+								</span>
+								<button id="">
+									加入购物车
+								</button>
+							</div>
+						</div>
+					</section>
+				</li>
 			</ul>
 		</section>
 		
