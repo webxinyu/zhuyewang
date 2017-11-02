@@ -18,6 +18,12 @@
 				padding: 0;
 				margin: 0;
 			}
+			.clearfix:after {			/* 清除浮动 */
+				content:"\200B"; 
+				display:block; 
+				height:0; 
+				clear:both; 
+			}
 			.setUpHeader {					/* title标题 */
 				height: 45px;
 				border-bottom: 1px #eee solid;
@@ -98,6 +104,22 @@
 				background: rgba(0,0,0,0);
 				border: none;
 			}
+			.typePage {
+				padding-top: 80px;
+			}
+			.typePage>ul li {
+				margin-bottom: 17px;
+				background: #fff;
+				padding: 0 10px;
+			}
+			.typePage>ul li.condition {
+				height: 70px;
+				line-height: 70px;
+				background: url(../../../../images/bg.png) no-repeat;
+				background-size: 100%;
+				color: #fff;
+				padding-left: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -115,10 +137,12 @@
 			<ul>
 				<li class="condition">
 					<span id="">
-						<i class="iconfont icon-zhengque"></i>完成
+						<i class="iconfont icon-zhengque"></i>&nbsp;&nbsp;完成
 					</span>
 				</li>
-				<li></li>
+				<li class="purchaseOrderTracking">
+					
+				</li>
 				<li></li>
 				<li></li>
 			</ul>
