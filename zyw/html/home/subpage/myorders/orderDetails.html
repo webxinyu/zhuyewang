@@ -66,6 +66,7 @@
 				color: #E18532;
 				font-size: 12px;
 				display: flex;
+				z-index: 999;
 			}
 			.remind>span:nth-of-type(1),
 			.remind>span:nth-of-type(3) {
@@ -91,8 +92,15 @@
 				background: #F8F8F8;
 				text-align: right;
 				padding: 8px 0;
+				display: flex;
 			}
-			footer>span {
+			footer>p:first-of-type {
+				flex: 1;
+			}
+			footer>p:last-of-type {
+				flex: 6;
+			}
+			footer>p>span {
 				height: 30px;
 				line-height: 30px;
 				text-align: center;
@@ -105,10 +113,13 @@
 				font-size: 12px;
 				border-radius: 3px;
 			}
-			footer>span:first-of-type {
-				margin-right: 50px;
+			footer>p:first-of-type>span {
 				background: rgba(0,0,0,0);
 				border: none;
+			}
+			footer>p:last-of-type>span.confirmReceivingTheItem  {
+				color: #f00;
+				border: 1px #f00 solid;
 			}
 			.typePage {
 				padding-top: 80px;
@@ -117,6 +128,16 @@
 				margin-bottom: 13px;
 				background: #fff;
 				padding: 0 10px;
+			}
+			.typePage>ul li.removeMargin {
+				margin-bottom: 0;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				border-bottom: 1px #eee solid;
+			}
+			.typePage>ul li>p {
+				height: 30px;
+				line-height: 30px;
 			}
 			.typePage>ul li.condition {						/* 订单状态 */
 				height: 70px;
@@ -261,6 +282,25 @@
 				color: #666;
 				border-radius: 3px;
 			}
+			.typePage>ul li.actualPayment {	/* 实付款 */
+				padding-bottom: 46px;
+				margin-bottom: 0;
+			}
+			.typePage>ul li.actualPayment>p {
+				text-align: right;
+				height: 40px;
+				line-height: 40px;
+			}
+			.typePage>ul li.actualPayment>p>span:first-of-type {
+				font-size: 16px;
+				color: #333;
+				font-weight: bold;
+			}
+			.typePage>ul li.actualPayment>p>span:last-of-type {
+				font-size: 15px;
+				color: #f00;
+				font-weight: bold;
+			}
 		</style>
 	</head>
 	<body>
@@ -341,22 +381,57 @@
 						</div>
 					</section>
 				</li>
+				<!-- 订单编号和下单时间 -->
+				<li class="removeMargin">
+					<p><span>订单编号：</span><span id="">64369332254</span><span>复制</span></p>
+					<p><span>下单时间：</span><span id="">2017-11-08 20:04:13</span></p>
+				</li>
+				<!-- 支付方式 -->
+				<li class="removeMargin">
+					<p><span>支付方式：</span><span id="">支付宝</span></p>
+				</li>
+				<!-- 配送方式和配送日期 -->
+				<li class="removeMargin">
+					<p><span>配送方式：</span><span id="">京东快递</span></p>
+					<p><span>配送日期：</span><span id="">2017-11-10 09:00-19:00</span></p>
+				</li>
+				<!-- 发票内容 -->
+				<li class="removeMargin" style="margin-bottom: 17px;">
+					<p><span>发票类型：</span><span id="">纸质发票</span></p>
+					<p><span>发票抬头：</span><span id="">个人</span></p>
+					<p><span>发票内容：</span><span id="">明细</span></p>
+				</li>
+				<!-- 商品总额及运费 -->
+				<li class="removeMargin">
+					<p><span>商品总额：</span><span id="">&yen;36.60</span></p>
+					<p><span>+运费：</span><span id="">&yen;0.00</span></p>
+				</li>
+				<li class="actualPayment">
+					<p><span>实付款：</span><span>&yen;36.60</span></p>
+				</li>
 			</ul>
 		</section>
 		
 		<footer>
-			<span id="">
-				删除订单
-			</span>
-			<span id="">
-				申请售后
-			</span>
-			<span id="">
-				再次购买
-			</span>
-			<span id="">
-				评价晒单
-			</span>
+			<p>
+				<span id="">
+					删除订单
+				</span>
+			</p>
+			<p>
+				<span id="">
+					申请售后
+				</span>
+				<span id="">
+					再次购买
+				</span>
+				<span id="">
+					评价晒单
+				</span>
+				<span class="confirmReceivingTheItem" id="">
+					确认收货
+				</span>
+			</p>
 		</footer>
 	</body>
 	<script src="../../../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
