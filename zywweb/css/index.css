@@ -140,20 +140,12 @@ header .typePage>span:nth-of-type(3) {
 	height: 950px;
 	width: 100%;
 	text-align: center;
-	position: relative;	
-}
-.banner>img {
-	height: 100%;
-	width: 100%;
-	display: inline-block;
+	background: url(../img/banner.png) no-repeat;	
 }
 .banner>.typePage {
-	position: absolute;
-	width: 1140px;
+	margin: 0 auto;
 	height: 950px;
-	left: 50%;
-	margin-left: -570px;
-	top: 0;
+	width: 1140px;
 }
 .banner>.typePage>nav {					/* 导航条 */
 	height: 60px;
@@ -264,4 +256,27 @@ header .typePage>span:nth-of-type(3) {
 	line-height: 20px;
 	text-align: left;
 	text-indent:2em
+}
+.main {							/*  */
+	width: 1140px;
+	margin: 32px auto 0;
+}
+.main .title {
+	height: 74px;
+	line-height: 74px;
+	width: 193px;
+	border-bottom: 2px #333 solid;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #2DC92D;
+}
+.main .thinks {
+	width: 850px;
+	height: 123px;
+	padding: 20px 0;
+	line-height: 30px;
+	font-size: 20px;
+	color: #333;
+	text-indent: 2em;
 }
