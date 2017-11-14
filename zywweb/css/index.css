@@ -280,3 +280,41 @@ header .typePage>span:nth-of-type(3) {
 	color: #333;
 	text-indent: 2em;
 }
+.main>ul {
+	width: 1140px;
+	height: 270px;
+	display: flex;
+	margin-bottom: 35px;	
+}
+.main>ul li {
+	flex: 1;
+	width: 350px;
+	height: 270px;
+	position: relative;
+	overflow: hidden;
+}
+.main>ul li>img {
+	height: 100%;
+	width: 100%;
+}
+.main>ul li>h1 {
+	height: 135px;
+	width: 400px;
+	position: absolute;
+	bottom: -62px;
+	left: -31px;
+	background: #2DC92D;
+	color: #fff;
+	transform: rotate(19deg);
+	overflow: hidden;
+}
+.main>ul li>h1>span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-19deg);
+	line-height: 135px;
+	font-size: 20px;
+	color: #fff;
+	margin-top: -67px;
+}
