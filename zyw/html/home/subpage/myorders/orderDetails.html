@@ -136,6 +136,13 @@
 				border-bottom: 1px #eee solid;
 				position: relative;
 			}
+			.typePage>ul li.removeMargin .orderNumber {
+				width: 200px;
+				height: 30px;
+				outline: none;
+				border: none;
+				font-size: 14px;
+			}
 			.typePage>ul li.removeMargin .copy {			/* 复制 */
 				border: 1px #eee solid;
 				display: inline-block;
@@ -399,7 +406,7 @@
 				</li>
 				<!-- 订单编号和下单时间 -->
 				<li class="removeMargin">
-					<p><span>订单编号：</span><span id="">64369332254</span><span class="copy">复制</span></p>
+					<p><span>订单编号：</span><input type="text" class="orderNumber" id="clip_num" value="64369332254" readonly="readonly" /><span class="copy" onClick="copyNum()">复制</span></p>
 					<p><span>下单时间：</span><span id="">2017-11-08 20:04:13</span></p>
 				</li>
 				<!-- 支付方式 -->
@@ -454,6 +461,27 @@
 	<script src="../../../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../../../js/common.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		
+		// 思路：要想复制到剪贴板，必须先选中这段文字。
+        function copyNum() {
+            var NumClip=document.getElementById("clip_num");
+            var NValue=NumClip.value;
+            var valueLength = NValue.length;
+            selectText(NumClip, 0, valueLength);
+            document.execCommand("Copy","false",null); // 执行浏览器复制命令
+            mui.toast("复制成功");
+        }
+        // input自带的select()方法在苹果端无法进行选择，所以需要自己去写一个类似的方法
+        function selectText(obj, startIndex, stopIndex) {
+            if (obj.setSelectionRange) {
+                obj.setSelectionRange(startIndex, stopIndex);
+            } else if (obj.createTextRange) {
+                var range = obj.createTextRange();
+                range.collapse(true);
+                range.moveStart('character', startIndex);
+                range.moveEnd('character', stopIndex - startIndex);
+                range.select();
+            }
+            obj.focus();
+        }
 	</script>
 </html>

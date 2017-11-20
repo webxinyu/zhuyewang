@@ -316,7 +316,10 @@ header {
 	flex: 1;
 	padding: 10px;
 }
-.showTime>img {
+.showTime {
+	height: 250px;
+}
+.showTime>video {
 	display: block;
 	width: 100%;
 }
