@@ -12,8 +12,64 @@
 		<link rel="stylesheet" type="text/css" href="../../css/microShow/microShow.css"/>
 		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
+			.mui-content {
+				position: relative;
+			}
 			.mui-content>.mui-table-view:first-child {
 				margin-top: -1px;
+			}
+			.mui-card-link {
+				display: inline-block;
+			}
+			.renovate {						/* 点击刷新按钮 */
+				position: fixed;
+				z-index:999;
+				right: 20px;
+				bottom: 50px;
+				background: #fff;
+				display: block;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				text-align:center;
+				padding: 0;
+				box-shadow: 0px 0px 5px #999;
+				
+			}
+			.renovate>img {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				left: 50%;
+				margin-left: -10px;
+			}
+			.click {
+				animation: myfirst 1s linear;
+				-webkit-animation: myfirst 1s linear infinite;	/* Safari 和 Chrome */
+			}
+			@keyframes myfirst
+			{
+			0%   {transform: rotate(0deg);}
+			25%   {transform: rotate(90deg);}
+			50%   {transform: rotate(180deg);}
+			100% {transform: rotate(360deg);}
+			}
+			
+			@-webkit-keyframes myfirst /* Safari 和 Chrome */
+			{
+			0%   {transform: rotate(0deg);}
+			25%   {transform: rotate(90deg);}
+			50%   {transform: rotate(180deg);}
+			100% {transform: rotate(360deg);}
+			}
+			.mui-card-link .iconfont{
+				font-size: 20px;
+			}
+			.mui-card-link:nth-of-type(2)>b {
+				color: #333;
 			}
 		</style>
 	</head>
@@ -26,12 +82,16 @@
 		</header>
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content">
+			<!-- 点击刷新 -->
+			<span class="renovate">
+				<img id="renovateImg" src="../../images/shuaxin.png"/>
+			</span>
 			<!--数据列表-->
 			<div class="mui-card">
 				<div class="mui-card-header mui-card-media">
 					<img src="../../images/index/hottwo02.png" />
 					<div class="mui-media-body">
-						小M
+						美丽中国
 						<p>发表于 2016-06-30 15:30</p>
 					</div>
 				</div>
@@ -39,14 +99,14 @@
 					<video src="../../videoAndAudio/microShow01.mp4" width="100%" height="100%" controls="controls"></video>
 				</div>
 				<div class="mui-card-footer">
-					<a class="mui-card-link" style="color: #f00;"><i class="iconfont icon-xiai"></i></a>
-					<a class="mui-card-link" style="color: #333;">评论</a>
-					<a class="mui-card-link" style="color: #333;">更多</a>
+					<a class="mui-card-link praise" style="color: #333;"><b><i class="iconfont icon-dianzan"></i></b>&nbsp;<b class="praiseNumber">325</b></a>
+					<a class="mui-card-link appraise" style="color: #333;"><b><i class="iconfont icon-wodefankui"></i></b>&nbsp;<b>4548</b></a>
+					<a class="mui-card-link" style="color: #333;"><i class="iconfont icon-fenxiang2"></i></a>
 				</div>
 			</div>
 			<div class="mui-card">
 				<div class="mui-card-header mui-card-media">
-					<img src="../../images/shop/shop35.png" />
+					<img src="../../images/shop/shop30.png" />
 					<div class="mui-media-body">
 						童年愿望
 						<p>发表于 2016-06-30 15:30</p>
@@ -56,14 +116,32 @@
 					<video src="../../videoAndAudio/microShow02.mp4" width="100%" height="100%" controls="controls"></video>
 				</div>
 				<div class="mui-card-footer">
-					<a class="mui-card-link" style="color: #f00;"><i class="iconfont icon-xiai"></i></a>
-					<a class="mui-card-link" style="color: #333;">评论</a>
-					<a class="mui-card-link" style="color: #333;">更多</a>
+					<a class="mui-card-link praise" style="color: #333;"><b><i class="iconfont icon-dianzan"></i></b>&nbsp;<b class="praiseNumber">325</b></a>
+					<a class="mui-card-link appraise" style="color: #333;"><b><i class="iconfont icon-wodefankui"></i></b>&nbsp;<b>4548</b></a>
+					<a class="mui-card-link" style="color: #333;"><i class="iconfont icon-fenxiang2"></i></a>
 				</div>
 			</div>
-			<ul class="mui-table-view mui-table-view-chevron"></ul>
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="../../images/shop/shop12.png" />
+					<div class="mui-media-body">
+						旅游笔记
+						<p>发表于 2016-06-30 15:30</p>
+					</div>
+				</div>
+				<div class="mui-card-content" >
+					<img style="width: 100%;height: 100%;" src="../../images/shop/shop23.png"/>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link praise" style="color: #333;"><b><i class="iconfont icon-dianzan"></i></b>&nbsp;<b class="praiseNumber">325</b></a>
+					<a class="mui-card-link appraise" style="color: #333;"><b><i class="iconfont icon-wodefankui"></i></b>&nbsp;<b>4548</b></a>
+					<a class="mui-card-link" style="color: #333;"><i class="iconfont icon-fenxiang2"></i></a>
+				</div>
+			</div>
+			<!--<ul class="mui-table-view mui-table-view-chevron"></ul>-->
 		</div>
 		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -84,28 +162,12 @@
 			function pullupRefresh() {
 				setTimeout(function() {
 					mui('#pullrefresh').pullRefresh().endPullup((++count > 2)); //参数为true代表没有更多数据了。
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					var newCount = cells.length>0?5:20;//首次加载20条，满屏
-					for (var i = cells.length, len = i + newCount; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-						table.appendChild(li);
-					}
+					mui.toast("暂无数据");
 				}, 1500);
 			}
 
 			function addData() {
-				var table = document.body.querySelector('.mui-table-view');
-				var cells = document.body.querySelectorAll('.mui-table-view-cell');
-				for(var i = cells.length, len = i + 5; i < len; i++) {
-					var li = document.createElement('li');
-					li.className = 'mui-table-view-cell';
-					li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-					//下拉刷新，新纪录插到最前面；
-					table.insertBefore(li, table.firstChild);
-				}
+				mui.toast("刷新成功");
 			}
 			/**
 			 * 下拉刷新具体业务实现
@@ -114,10 +176,30 @@
 				setTimeout(function() {
 					addData();
 					mui('#pullrefresh').pullRefresh().endPulldown();
+					$("#renovateImg").removeClass('click');
 					mui.toast("刷新成功");
 				}, 1500);
 			}
-
+			/* 点击刷新 */
+			$("#renovateImg").click(function(){
+				mui.scrollTo(0,200);
+				$(this).addClass('click');
+				pulldownRefresh();
+			});
+			/* 点赞 */
+			$(".praise").click(function(){
+				$(this).css('color','#f00');
+				var praiseCount = $(this).find('.praiseNumber').text();
+				praiseCount++;
+				$(this).find('.praiseNumber').text(praiseCount);
+			});
+			/* 点击评论 */
+			$(".appraise").ontouchstart = function(){
+				$(this).css('color','#f00');
+			}
+			$(".appraise").ontouchend = function(){
+				$(this).css('color','#333');
+			}
 		</script>
 	</body>
 
