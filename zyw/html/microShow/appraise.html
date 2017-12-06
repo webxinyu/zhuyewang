@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/microShow/microShow.css"/>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<title>微秀场</title>
+		<style type="text/css">
+			.mui-title>span {
+				height: 44px;
+				float: left;
+			}
+			.headSculpture {
+				height: 44px;
+				width: 44px;
+			}
+			.headSculpture>img {
+				height: 30px;
+				width: 30px;
+				margin-top: 7px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+			}
+			.userName {
+				margin-left: 10px;
+			}
+			.appraiseContain {			/* 评论 */
+				background: #fff;
+				padding: 0 10px;
+				overflow: hidden;
+				margin-top: 44px;
+			}
+			.appraiseContain>h5 {
+				height: 30px;
+				line-height: 30px;
+			}
+			.appraiseList {		/* 评论列表 */
+				padding-top: 17px;
+			}
+			.appraiseListTop {
+				display: flex;
+				height: 40px;
+			}
+			.appraiseListTop li:nth-of-type(1) {
+				flex: 1;
+			}
+			.appraiseListTop li:nth-of-type(2) {
+				flex: 6;
+			}
+			.appraiseListHead>img {
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				margin-top: 5px;
+			}
+			.nickname {
+				height: 25px;
+				line-height: 25px;
+				color: #333;
+				font-size: 14px;
+				margin: 0;
+			}
+			.appraiseTime {
+				height: 15px;
+				line-height: 15px;
+				font-size: 10px;
+				margin: 0;
+			}
+			.appraiseContent {			/* 评论内容 */
+				display: flex;
+				border-bottom: 1px #eee solid;
+			}
+			.appraiseContent>p:nth-of-type(1) {
+				flex: 1;
+			}
+			.appraiseContent>p:nth-of-type(2) {
+				flex: 6;
+				color: #333;
+			}
+			.inputFieldContain {		/* 评价输入框 */
+				height: 50px;
+				padding: 10px 10px;
+				background: #fff;
+				border-top: 1px #ccc solid;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			.picAndInput {
+				height: 30px;
+				border-radius: 20px;
+				-webkit-border-radius: 20px;
+				background: #eee;
+				display: flex;
+				width: 100%;
+				float: left;
+			}
+			.picAndInput>span:nth-of-type(1) {
+				flex: 1;
+				line-height: 30px;
+				text-align: center;
+			}
+			.picAndInput>span:nth-of-type(1)>.iconfont {
+				font-size: 26px;
+				color: #999;
+			}
+			.picAndInput>span:nth-of-type(2) {
+				flex: 4;
+			}
+			.picAndInput>span:nth-of-type(2)>textarea {
+				height: 30px;
+				line-height: 15px;
+				width: 90%;
+				font-size: 14px;
+				background: rgba(255,255,255,0);
+				outline: none;
+				border: none;
+			}
+			.inputFieldContain .sendAppraise {				/* 发送按钮 */
+				float: right;
+				width: 16%;
+				height: 30px;
+				font-size: 14px;
+				color: #333;
+				outline: none;
+				border: none;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<span onclick="back()"><i class="iconfont icon-fanhui1"></i></span>
+			<h1 id="title" class="mui-title">
+				<span id="headSculpture" class="headSculpture">
+					<img src="../login/images/user-photo.png"/>
+				</span>
+				<span id="userName" class="userName">
+					时间改IE个
+				</span>
+			</h1>
+			<span></span>
+		</header>
+		<!-- 评论 -->
+		<section class="appraiseContain">
+			<h5>热门评论(<b id="hotAppraise">66</b>)</h5>
+			<!-- 评论列表 -->
+			<div class="appraiseList">
+				<ul class="appraiseListTop">
+					<li id="" class="appraiseListHead">
+						<img src="../../images/home/shuijiao.jpg"/>
+					</li>
+					<li>
+						<p class="nickname">走在田间的小红帽</p>
+						<p class="appraiseTime">12-04 12:06</p>
+					</li>
+				</ul>
+				<div class="appraiseContent">
+					<p></p>
+					<p class="appraiseContentDetail">
+						这里是评论的主要内容
+					</p>
+				</div>
+			</div>
+			<div class="appraiseList">
+				<ul class="appraiseListTop">
+					<li id="" class="appraiseListHead">
+						<img src="../../images/home/cbd.jpg"/>
+					</li>
+					<li>
+						<p class="nickname">孤独的旅行者</p>
+						<p class="appraiseTime">12-04 12:06</p>
+					</li>
+				</ul>
+				<div class="appraiseContent">
+					<p></p>
+					<p class="appraiseContentDetail">
+						美丽的风景总是需要和自己最在乎的人一起去欣赏。
+					</p>
+				</div>
+			</div>
+		</section>
+		<div class="inputFieldContain">
+			<div class="picAndInput" id="picAndInput">
+				<span><i class="iconfont icon-tupian"></i></span>
+				<span>
+					<!--<input type="text" name="inputField" id="inputField" value="" placeholder="请输入您的评论..." />-->
+					<textarea name="inputField" id="inputField" rows="" cols="" placeholder="请输入您的评论..."></textarea>
+				</span>
+			</div>
+			<input type="button" name="sendAppraise" id="sendAppraise" class="sendAppraise" value="发送" disabled />
+		</div>
+		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				/* 输入框的获取焦点和失去焦点事件 */
+				$('#inputField').focus(function(){
+					$('#sendAppraise')[0].style.display = 'block';
+					$('#picAndInput')[0].style.width = '80%';
+				});
+				$('#inputField').keyup(function(){
+					if ($(this).val() != '') {
+						$('#sendAppraise')[0].style.color = '#2AC845';
+						$('#sendAppraise')[0].disabled = false;
+						console.log($('#sendAppraise'));
+					}else {
+						$('#sendAppraise')[0].style.color = '#333';
+						$('#sendAppraise')[0].disabled = true;
+					}
+				})
+				
+				$('#inputField').blur(function(){
+					var blurTimer;
+					var blurSelf = $(this);
+					blurSelf.val('');
+					$('#sendAppraise')[0].style.display = 'none';
+					$('#sendAppraise')[0].style.color = '#333';
+					$('#sendAppraise')[0].disabled = true;
+					$('#picAndInput')[0].style.width = '100%';
+//					clearTimeout(blurTimer);
+//					blurTimer = setTimeout(function(){
+//						clearTimeout(blurTimer);				
+//					},300);
+				});
+				/* 点击发送按钮 */
+				var sendAppraise = document.getElementById("sendAppraise");
+				sendAppraise.addEventListener('tap',function(event){
+					var newAppraise = $('#inputField').val();
+					
+					$('.appraiseContain').append(`
+						<div class="appraiseList">
+							<ul class="appraiseListTop">
+								<li id="" class="appraiseListHead">
+									<img src="../../images/home/yuantiao.jpg"/>
+								</li>
+								<li>
+									<p class="nickname">遥望远方</p>
+									<p class="appraiseTime">12-04 12:06</p>
+								</li>
+							</ul>
+							<div class="appraiseContent">
+								<p></p>
+								<p class="appraiseContentDetail">`
+								+ newAppraise +
+								`</p>
+							</div>
+						</div>					
+					`);
+				});
+			})
+		</script>
+	</body>
+</html>
