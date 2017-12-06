@@ -35,6 +35,7 @@
 				padding: 0 10px;
 				overflow: hidden;
 				margin-top: 44px;
+				margin-bottom: 50px;
 			}
 			.appraiseContain>h5 {
 				height: 30px;
@@ -76,13 +77,27 @@
 			.appraiseContent {			/* 评论内容 */
 				display: flex;
 				border-bottom: 1px #eee solid;
+				padding-bottom: 7px;
 			}
-			.appraiseContent>p:nth-of-type(1) {
+			.appraiseContent>p {
 				flex: 1;
 			}
-			.appraiseContent>p:nth-of-type(2) {
+			.appraiseContent>.appraiseContentDetail {
 				flex: 6;
 				color: #333;
+				font-size: 14px;
+				text-align: left;
+			}
+			.appraiseContent .appraiseContentDetail .appraiseImg {		/* 发表图片 */
+				width: 80px;
+				height: 80px;
+				overflow: hidden;
+				position: relative;
+			}
+			.appraiseContent .appraiseContentDetail .appraiseImg>img {
+				width: 100%;
+				height: 100%;
+				display: block;
 			}
 			.inputFieldContain {		/* 评价输入框 */
 				height: 50px;
@@ -92,6 +107,7 @@
 				position: fixed;
 				bottom: 0;
 				width: 100%;
+				z-index: 99999;
 			}
 			.picAndInput {
 				height: 30px;
@@ -123,7 +139,7 @@
 				outline: none;
 				border: none;
 			}
-			.inputFieldContain .sendAppraise {				/* 发送按钮 */
+			.inputFieldContain  .sendAppraise {				/* 发送按钮 */
 				float: right;
 				width: 16%;
 				height: 30px;
@@ -132,6 +148,37 @@
 				outline: none;
 				border: none;
 				display: none;
+			}
+			.imgContain {
+				position: absolute;
+				height: 60px;
+				width: 60px;
+				bottom: 60px;
+				border: 8px #fff solid;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				box-shadow: 0px 0px 5px #aaa;
+				display: none;
+			}
+			.inputFieldContain .closeImg {
+				display: block;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				left: 60px;
+				top: -80px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: #2AC845;
+				z-index: 999;
+				display: none;
+			}
+			.inputFieldContain .closeImg>.iconfont {
+				font-size: 12px;
+				color: #fff;
+				font-weight: bold;
 			}
 		</style>
 	</head>
@@ -164,9 +211,12 @@
 				</ul>
 				<div class="appraiseContent">
 					<p></p>
-					<p class="appraiseContentDetail">
+					<div class="appraiseContentDetail">
 						这里是评论的主要内容
-					</p>
+						<div class="appraiseImg">
+							<img src="../../images/shop/shop34.png"/>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="appraiseList">
@@ -181,15 +231,20 @@
 				</ul>
 				<div class="appraiseContent">
 					<p></p>
-					<p class="appraiseContentDetail">
+					<div class="appraiseContentDetail">
 						美丽的风景总是需要和自己最在乎的人一起去欣赏。
-					</p>
+					</div>
 				</div>
 			</div>
 		</section>
 		<div class="inputFieldContain">
+			<span id="closeImg" class="closeImg">
+				<i class="iconfont icon-guanbijiantou"></i>
+			</span>
+			<div class="imgContain" id="output">
+			</div>
 			<div class="picAndInput" id="picAndInput">
-				<span><i class="iconfont icon-tupian"></i></span>
+				<span id="openAlbum"><i class="iconfont icon-tupian"></i></span>
 				<span>
 					<!--<input type="text" name="inputField" id="inputField" value="" placeholder="请输入您的评论..." />-->
 					<textarea name="inputField" id="inputField" rows="" cols="" placeholder="请输入您的评论..."></textarea>
@@ -199,6 +254,7 @@
 		</div>
 		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
 				/* 输入框的获取焦点和失去焦点事件 */
@@ -210,7 +266,6 @@
 					if ($(this).val() != '') {
 						$('#sendAppraise')[0].style.color = '#2AC845';
 						$('#sendAppraise')[0].disabled = false;
-						console.log($('#sendAppraise'));
 					}else {
 						$('#sendAppraise')[0].style.color = '#333';
 						$('#sendAppraise')[0].disabled = true;
@@ -233,7 +288,18 @@
 				/* 点击发送按钮 */
 				var sendAppraise = document.getElementById("sendAppraise");
 				sendAppraise.addEventListener('tap',function(event){
-					var newAppraise = $('#inputField').val();
+					var newImage = $('#output').html();
+					var newAppraise = $('#inputField').val();	//输入的内容
+					var newName = '遥望远方';						//评论人的昵称
+					var d=new Date();							//评论的时间
+					var day = 0;
+					var month = d.getUTCMonth()+1;
+					if (d.getUTCDate() <10) {
+						day = '0' + d.getUTCDate();
+					}else {
+						day = d.getUTCDate();
+					}
+					var newTime = month+'-'+day+' '+d.getHours()+':'+d.getMinutes();
 					
 					$('.appraiseContain').append(`
 						<div class="appraiseList">
@@ -242,19 +308,144 @@
 									<img src="../../images/home/yuantiao.jpg"/>
 								</li>
 								<li>
-									<p class="nickname">遥望远方</p>
-									<p class="appraiseTime">12-04 12:06</p>
+									<p class="nickname">`
+									+ newName +
+									`</p>
+									<p class="appraiseTime">`
+									+ newTime +
+									`</p>
 								</li>
 							</ul>
 							<div class="appraiseContent">
 								<p></p>
-								<p class="appraiseContentDetail">`
+								<div class="appraiseContentDetail">`
 								+ newAppraise +
-								`</p>
+								`<div class="appraiseImg">`
+								+ newImage +
+								`</div>
+								</div>
 							</div>
 						</div>					
 					`);
+					$('#closeImg').css('display','none');
+					$('#output').css('display','none');
+					$('#output').html('');
 				});
+				/* 发表图片评论 */
+				var openAlbum = document.getElementById("openAlbum")
+				openAlbum.addEventListener('tap',function(){
+					galleryImg();
+					$('#closeImg').css('display','block');
+					$('#output').css('display','block');
+				});
+				/* 关闭选好的图片 */
+				var closeImg = document.getElementById("closeImg");
+				closeImg.addEventListener('tap', function(){
+					$('#closeImg').css('display','none');
+					$('#output').css('display','none');
+					$('#output').html('');
+				})
+				function plusReady(){
+					// 用户侧滑返回时关闭显示的图片
+					plus.webview.currentWebview().addEventListener('popGesture', function(e){
+						if(e.type=='start'){
+							closeImg();
+						}
+					}, false );
+				}
+				document.addEventListener('plusready',plusReady,false);
+				function galleryImg(){
+					// 从相册中选择图片
+					outSet('');
+				    plus.gallery.pick(function(path){
+				    	//outLine(path);
+				        showImg(path);
+				        //createItem(path);
+				        $('#inputField').focus();
+				        $('#sendAppraise')[0].style.color = '#2AC845';
+						$('#sendAppraise')[0].disabled = false;
+				    }, function(e){
+				    	outSet('取消选择图片');
+				    }, {filter:'image'});
+				}
+				var lfs=null;// 保留上次选择图片列表
+				function galleryImgsSelected(){
+					// 从相册中选择图片
+					outSet('从相册中选择多张图片(限定最多选择3张)：');
+				    plus.gallery.pick(function(e){
+				    	lfs=e.files;
+				    	for(var i in e.files){
+					    	outLine(e.files[i]);
+				    	}
+				    }, function(e){
+				    	outSet('取消选择图片');
+				    },{filter:'image',multiple:true,maximum:3,selected:lfs,system:false,onmaxed:function(){
+						plus.nativeUI.alert('最多只能选择3张图片');
+				    }});// 最多选择3张图片
+				}
+				function showImg(url){
+					// 兼容以"file:"开头的情况
+					if(0!=url.indexOf('file://')){
+						url='file://'+url;
+					}
+					var _body_ = document.getElementById("output");
+					var _div_ = document.createElement('div');
+					_div_.style.top='0px';
+					_div_.style.left='0px';
+					_div_.style.height='100%';
+					_div_.style.width='100%';
+					_div_.style.zIndex='999';
+					_div_.style.position='absolute';
+					_div_.style.background='#ffffff';
+					_div_.id='imgShow';
+					_div_.onclick=closeImg;
+					var _img_=document.createElement('img');
+					_img_.src=url;
+					_img_.style.width='100%';
+					_img_.style.height='100%';
+					_body_.appendChild(_div_);
+					_div_.appendChild(_img_);
+				}
+				function closeImg(){
+					var trnode=document.getElementById('imgShow');
+					trnode&&trnode.parentNode.removeChild(trnode);
+				}
+				
+				var list=null,first=null;
+				document.addEventListener('DOMContentLoaded', function(){
+					list=document.getElementById('list');
+					first=document.getElementById('empty');
+				}, false);
+				// 添加列表项
+				function createItem(path){
+					var li = document.createElement('li');
+					li.className = 'ditem';
+					li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
+					li.setAttribute('onclick', 'displayMedia(this);' );
+					list.insertBefore(li, first.nextSibling);
+					var i = path.lastIndexOf('/');
+					if(i<0){
+						i = path.lastIndexOf('\\');
+					}
+					li.querySelector('.aname').innerText = path.substr(i+1);
+					li.querySelector('.ainf').innerText = path;
+					li.path = path;
+					// 设置空项不可见
+					first.style.display = 'none';
+				}
+				// 清除列表记录
+				function cleanList() {
+					list.innerHTML = '<li id="empty" class="ditem-empty">无记录</li>';
+					empty = document.getElementById('empty');
+					// 删除音频文件
+					outSet('清空选择照片记录：');
+				}
+				// 返回后关闭图片显示
+				var _back=window.back;
+				window.back=function(){
+					closeImg();
+					_back();
+				};
 			})
 		</script>
 	</body>
