@@ -392,7 +392,9 @@
 					"images/add.png",
 					"images/index/microShow01.png"
 				],
-				"refer": [],
+				"refer": [
+					"html/microShow/appraise.html"
+				],
 				"priority": 0
 			},
 			"html/home/home.html": {
