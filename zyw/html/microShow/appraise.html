@@ -257,6 +257,12 @@
 		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
+				/* 隐藏图片暂存区 */
+				var hideImg = function() {
+					$('#closeImg').css('display','none');
+					$('#output').css('display','none');
+					$('#output').html('');
+				}
 				/* 输入框的获取焦点和失去焦点事件 */
 				$('#inputField').focus(function(){
 					$('#sendAppraise')[0].style.display = 'block';
@@ -327,9 +333,7 @@
 							</div>
 						</div>					
 					`);
-					$('#closeImg').css('display','none');
-					$('#output').css('display','none');
-					$('#output').html('');
+					hideImg();
 				});
 				/* 发表图片评论 */
 				var openAlbum = document.getElementById("openAlbum")
@@ -341,10 +345,9 @@
 				/* 关闭选好的图片 */
 				var closeImg = document.getElementById("closeImg");
 				closeImg.addEventListener('tap', function(){
-					$('#closeImg').css('display','none');
-					$('#output').css('display','none');
-					$('#output').html('');
-				})
+					hideImg();
+				});
+				
 				function plusReady(){
 					// 用户侧滑返回时关闭显示的图片
 					plus.webview.currentWebview().addEventListener('popGesture', function(e){
@@ -365,7 +368,8 @@
 				        $('#sendAppraise')[0].style.color = '#2AC845';
 						$('#sendAppraise')[0].disabled = false;
 				    }, function(e){
-				    	outSet('取消选择图片');
+				    	outSet('');		//取消选择图片
+				    	hideImg();
 				    }, {filter:'image'});
 				}
 				var lfs=null;// 保留上次选择图片列表
