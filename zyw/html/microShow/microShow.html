@@ -90,7 +90,7 @@
 			<div class="mui-card">
 				<div class="mui-card-header mui-card-media">
 					<img src="../../images/index/hottwo02.png" />
-					<div class="mui-media-body">
+					<div class="mui-media-body" id="builty">
 						美丽中国
 						<p>发表于 2016-06-30 15:30</p>
 					</div>
@@ -209,6 +209,18 @@
 			    	id:'appraise',
 			    	extras:{
 			      		name:'toAppraise',
+			    	}
+			  	});
+			});
+			
+			document.getElementById('builty').addEventListener('tap', function() {
+				var uName = $(this).val();
+			  	//打开我的微秀场
+			  	mui.openWindow({
+			    	url: 'myMicroShow.html', 
+			    	id:'builty',
+			    	extras:{
+			      		name:uName,
 			    	}
 			  	});
 			});
